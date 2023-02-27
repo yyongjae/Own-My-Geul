@@ -33,10 +33,9 @@ fix: loading data error fix (#102)
 - main.py에서 load.py의 함수를 호출하는 부분 수정
 ```
 
-6. __PR__ 의 제목은 commit message와 동일하게 합니다.
+6. __PR__ 은 기능 구현 단위로 작성해서 보내기. (이슈 역시 기능 단위)
 
-7. __ISSUE__ 의 제목은 [CONVENTION]: 내용 의 구성으로 합니다
-    - ex. [FEAT]: 서버 연결 기능 구현
+7. __ISSUE__ 는 상황에 맞는 이슈 템플릿 사용
 
     
 
