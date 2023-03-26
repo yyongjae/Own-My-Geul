@@ -1,0 +1,10 @@
+.components{
+    display: flex;
+}
+
+.description{
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    margin: auto;
+}
