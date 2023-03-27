@@ -1,4 +1,4 @@
-package omg.omgspringbootapp.domain.upload
+package omg.omgspringbootapp.domain.image
 
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.cloud.storage.BlobId
