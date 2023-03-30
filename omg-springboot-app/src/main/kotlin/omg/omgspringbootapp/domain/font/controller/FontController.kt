@@ -18,7 +18,7 @@ class FontController (private val fontService: FontService) {
     @Parameter(name = "MultipartFile", description = "손글씨 이미지")
     @Parameter(name = "String", description = "이미지 이름(삭제 예정)")
     @PostMapping("/handwriting")
-    fun uploadHandwritingToGCP(
+    fun createFont(
         @RequestParam("image") image: MultipartFile,
         @RequestParam("text") text: String
     ): ResponseEntity<CommonResponse> {
@@ -27,6 +27,9 @@ class FontController (private val fontService: FontService) {
             image,
             text
         )
+
+        // 폰트 생성 요청
+        val font = fontService.createFont(image,"http://localhost:8000/upload")
         return ResponseEntity.ok(CommonResponse().response("이미지 업로드 성공"))
     }
 }
