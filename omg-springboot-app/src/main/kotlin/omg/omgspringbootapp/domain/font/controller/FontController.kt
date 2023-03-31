@@ -17,7 +17,7 @@ class FontController (private val fontService: FontService) {
     @Operation(summary = "폰트 생성", description = "손글씨 이미지를 업로드하면 폰트가 생성됩니다.")
     @Parameter(name = "MultipartFile", description = "손글씨 이미지")
     @Parameter(name = "String", description = "이미지 이름(삭제 예정)")
-    @PostMapping("/handwriting")
+    @PostMapping("/new")
     fun createFont(
         @RequestParam("image") image: MultipartFile,
         @RequestParam("text") text: String
