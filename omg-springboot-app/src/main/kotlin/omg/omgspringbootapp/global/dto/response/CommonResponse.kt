@@ -1,14 +1,15 @@
 package omg.omgspringbootapp.global.dto.response
 
-import lombok.Builder
-
-@Builder
 class CommonResponse (
-    val message: String = "성공적으로 요청을 처리하였습니다.",
-    val status: Boolean = true
+    val status: Boolean = true,
+    val message: String = "성공적으로 요청을 처리하였습니다."
 ){
-    fun response(message: String): CommonResponse {
+    fun response(
+        status: Boolean,
+        message: String
+    ): CommonResponse {
         return CommonResponse(
+            status,
             message
         )
     }
