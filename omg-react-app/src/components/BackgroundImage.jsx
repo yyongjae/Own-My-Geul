@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./BackgroundImage.module.css";
+import styles from "../styles/BackgroundImage.module.css";
 
 function BackgroundImage(props) {
     return (

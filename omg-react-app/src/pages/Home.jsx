@@ -1,10 +1,9 @@
 import React from 'react';
-import backgroundImage from './homeBackgroundImage.png'
-import logo from './logo.svg'
-import BackgroundImage from "./BackgroundImage";
-import Button from './Button';
+import backgroundImage from '../assets/homeBackgroundImage.png'
+import BackgroundImage from "../components/BackgroundImage";
+import Button from '../components/Button';
 import {Link} from 'react-router-dom';
-import styles from "./Home.module.css"
+import styles from "../styles/Home.module.css"
 
 const OMGFontStyle = {
     fontSize : "128px",
