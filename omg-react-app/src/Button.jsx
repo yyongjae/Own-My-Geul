@@ -24,7 +24,7 @@ const ButtonStyle = {
 function Button(props) {
     return (
         <div style={ButtonDiv}>
-            <button style={ButtonStyle} onClick={props.goMain}>
+            <button style={ButtonStyle}>
                 <span style={ButtonFontStyle}>{props.content}</span>
             </button>
         </div>
