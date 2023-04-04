@@ -1,0 +1,2 @@
+/home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/050000.pth filter=lfs diff=lfs merge=lfs -text
+/home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth filter=lfs diff=lfs merge=lfs -text
