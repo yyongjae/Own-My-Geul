@@ -1,0 +1,1622 @@
+[37m[36mINFO[0m[0m::03/22 06:40:26 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/22 06:40:26 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/22 06:40:26 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/22 06:40:26 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/22 06:40:28 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/22 06:40:29 | Start training ...
+[37m[36mINFO[0m[0m::03/22 06:40:33 | Step       0
+|D             3.986 |G            -0.367 |FM            0.206 |R_font        1.000 |F_font        0.000 |R_uni         0.600 |F_uni         0.000
+
+[37m[36mINFO[0m[0m::03/22 06:41:36 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/22 06:41:36 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/22 06:41:36 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/22 06:41:36 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/22 06:41:38 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/22 06:41:39 | Start training ...
+[37m[36mINFO[0m[0m::03/22 06:41:43 | Step       0
+|D             3.993 |G            -0.330 |FM            0.204 |R_font        1.000 |F_font        0.000 |R_uni         0.600 |F_uni         0.200
+
+[37m[36mINFO[0m[0m::03/23 06:35:00 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/23 06:35:00 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/23 06:35:00 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/23 06:35:01 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/23 06:35:02 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/23 06:35:04 | Start training ...
+[37m[36mINFO[0m[0m::03/23 06:35:12 | Step       0
+|D             3.988 |G            -0.297 |FM            0.208 |R_font        1.000 |F_font        0.000 |R_uni         0.600 |F_uni         0.400
+
+[37m[36mINFO[0m[0m::03/23 06:35:26 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/23 06:35:26 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/23 06:35:26 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/23 06:35:27 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/23 06:35:28 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/23 06:35:29 | Start training ...
+[37m[36mINFO[0m[0m::03/23 06:35:34 | Step       0
+|D             3.981 |G            -0.328 |FM            0.207 |R_font        1.000 |F_font        0.000 |R_uni         0.600 |F_uni         0.000
+
+[37m[36mINFO[0m[0m::03/23 07:24:17 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/23 07:24:17 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/23 07:24:17 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/23 07:24:18 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/23 07:24:19 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/23 07:24:20 | Start training ...
+[37m[36mINFO[0m[0m::03/23 07:24:43 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/23 07:24:43 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/23 07:24:43 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/23 07:24:43 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/23 07:24:45 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/23 07:24:46 | Start training ...
+[37m[36mINFO[0m[0m::03/23 07:24:58 | Step       0
+|D             3.964 |G            -0.274 |FM            0.208 |R_font        1.000 |F_font        0.000 |R_uni         0.550 |F_uni         0.400
+
+[37m[36mINFO[0m[0m::03/23 07:46:38 | Step    1000
+|D             3.964 |G             0.175 |FM            0.048 |R_font        0.460 |F_font        0.622 |R_uni         0.580 |F_uni         0.439
+
+[37m[36mINFO[0m[0m::03/23 07:50:24 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/23 07:50:24 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/23 07:50:24 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/23 07:50:24 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/23 07:50:25 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/23 07:50:26 | Start training ...
+[37m[36mINFO[0m[0m::03/23 07:50:39 | Step       0
+|D             3.972 |G            -0.265 |FM            0.210 |R_font        1.000 |F_font        0.000 |R_uni         0.350 |F_uni         0.450
+
+[37m[36mINFO[0m[0m::03/23 08:12:10 | Step    1000
+|D             3.953 |G             0.063 |FM            0.051 |R_font        0.569 |F_font        0.529 |R_uni         0.602 |F_uni         0.410
+
+[37m[36mINFO[0m[0m::03/23 08:30:46 | Step    2000
+|D             3.942 |G             0.127 |FM            0.040 |R_font        0.478 |F_font        0.588 |R_uni         0.659 |F_uni         0.361
+
+[37m[36mINFO[0m[0m::03/23 08:49:32 | Step    3000
+|D             3.936 |G             0.046 |FM            0.039 |R_font        0.540 |F_font        0.544 |R_uni         0.665 |F_uni         0.346
+
+[37m[36mINFO[0m[0m::03/23 09:08:16 | Step    4000
+|D             3.922 |G             0.058 |FM            0.045 |R_font        0.545 |F_font        0.552 |R_uni         0.618 |F_uni         0.402
+
+[37m[36mINFO[0m[0m::03/23 09:26:55 | Step    5000
+|D             3.973 |G             0.020 |FM            0.037 |R_font        0.528 |F_font        0.522 |R_uni         0.657 |F_uni         0.341
+
+[37m[36mINFO[0m[0m::03/23 09:45:29 | Step    6000
+|D             3.956 |G             0.039 |FM            0.044 |R_font        0.527 |F_font        0.560 |R_uni         0.695 |F_uni         0.304
+
+[37m[36mINFO[0m[0m::03/23 10:04:09 | Step    7000
+|D             3.958 |G             0.037 |FM            0.048 |R_font        0.539 |F_font        0.562 |R_uni         0.709 |F_uni         0.294
+
+[37m[36mINFO[0m[0m::03/23 10:22:49 | Step    8000
+|D             3.953 |G            -0.021 |FM            0.054 |R_font        0.585 |F_font        0.529 |R_uni         0.722 |F_uni         0.270
+
+[37m[36mINFO[0m[0m::03/23 10:41:24 | Step    9000
+|D             3.948 |G            -0.000 |FM            0.058 |R_font        0.559 |F_font        0.555 |R_uni         0.733 |F_uni         0.250
+
+[37m[36mINFO[0m[0m::03/23 10:59:58 | Step   10000
+|D             3.933 |G             0.032 |FM            0.066 |R_font        0.539 |F_font        0.586 |R_uni         0.727 |F_uni         0.243
+
+[37m[36mINFO[0m[0m::03/23 10:59:59 | Validation at Epoch = 9.074
+[37m[36mINFO[0m[0m::03/23 11:00:03 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/23 11:18:37 | Step   11000
+|D             3.918 |G             0.017 |FM            0.073 |R_font        0.559 |F_font        0.581 |R_uni         0.727 |F_uni         0.239
+
+[37m[36mINFO[0m[0m::03/23 11:37:13 | Step   12000
+|D             3.901 |G             0.049 |FM            0.078 |R_font        0.560 |F_font        0.599 |R_uni         0.724 |F_uni         0.249
+
+[37m[36mINFO[0m[0m::03/23 11:55:43 | Step   13000
+|D             3.894 |G             0.075 |FM            0.082 |R_font        0.541 |F_font        0.614 |R_uni         0.707 |F_uni         0.257
+
+[37m[36mINFO[0m[0m::03/23 12:14:24 | Step   14000
+|D             3.879 |G             0.091 |FM            0.087 |R_font        0.523 |F_font        0.635 |R_uni         0.717 |F_uni         0.252
+
+[37m[36mINFO[0m[0m::03/23 12:32:57 | Step   15000
+|D             3.862 |G             0.085 |FM            0.091 |R_font        0.544 |F_font        0.631 |R_uni         0.706 |F_uni         0.263
+
+[37m[36mINFO[0m[0m::03/23 12:51:29 | Step   16000
+|D             3.848 |G             0.093 |FM            0.095 |R_font        0.547 |F_font        0.632 |R_uni         0.702 |F_uni         0.267
+
+[37m[36mINFO[0m[0m::03/23 13:10:00 | Step   17000
+|D             3.841 |G             0.088 |FM            0.099 |R_font        0.551 |F_font        0.634 |R_uni         0.697 |F_uni         0.270
+
+[37m[36mINFO[0m[0m::03/23 13:28:37 | Step   18000
+|D             3.824 |G             0.131 |FM            0.102 |R_font        0.550 |F_font        0.641 |R_uni         0.700 |F_uni         0.275
+
+[37m[36mINFO[0m[0m::03/23 13:47:09 | Step   19000
+|D             3.816 |G             0.107 |FM            0.104 |R_font        0.554 |F_font        0.640 |R_uni         0.708 |F_uni         0.255
+
+[37m[36mINFO[0m[0m::03/23 14:05:41 | Step   20000
+|D             3.806 |G             0.127 |FM            0.106 |R_font        0.557 |F_font        0.652 |R_uni         0.699 |F_uni         0.267
+
+[37m[36mINFO[0m[0m::03/23 14:05:41 | Validation at Epoch = 18.149
+[37m[36mINFO[0m[0m::03/23 14:05:43 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/23 14:24:14 | Step   21000
+|D             3.800 |G             0.120 |FM            0.109 |R_font        0.561 |F_font        0.636 |R_uni         0.694 |F_uni         0.271
+
+[37m[36mINFO[0m[0m::03/23 14:42:46 | Step   22000
+|D             3.785 |G             0.126 |FM            0.111 |R_font        0.559 |F_font        0.640 |R_uni         0.706 |F_uni         0.264
+
+[37m[36mINFO[0m[0m::03/23 15:01:17 | Step   23000
+|D             3.780 |G             0.157 |FM            0.112 |R_font        0.558 |F_font        0.656 |R_uni         0.703 |F_uni         0.270
+
+[37m[36mINFO[0m[0m::03/23 15:19:50 | Step   24000
+|D             3.775 |G             0.137 |FM            0.112 |R_font        0.568 |F_font        0.640 |R_uni         0.702 |F_uni         0.267
+
+[37m[36mINFO[0m[0m::03/23 15:38:23 | Step   25000
+|D             3.772 |G             0.133 |FM            0.111 |R_font        0.567 |F_font        0.642 |R_uni         0.707 |F_uni         0.260
+
+[37m[36mINFO[0m[0m::03/23 15:56:55 | Step   26000
+|D             3.770 |G             0.127 |FM            0.112 |R_font        0.568 |F_font        0.628 |R_uni         0.714 |F_uni         0.262
+
+[37m[36mINFO[0m[0m::03/23 16:15:25 | Step   27000
+|D             3.770 |G             0.166 |FM            0.112 |R_font        0.551 |F_font        0.658 |R_uni         0.707 |F_uni         0.266
+
+[37m[36mINFO[0m[0m::03/23 16:33:53 | Step   28000
+|D             3.770 |G             0.150 |FM            0.110 |R_font        0.558 |F_font        0.649 |R_uni         0.714 |F_uni         0.252
+
+[37m[36mINFO[0m[0m::03/23 16:52:23 | Step   29000
+|D             3.772 |G             0.160 |FM            0.109 |R_font        0.556 |F_font        0.653 |R_uni         0.699 |F_uni         0.273
+
+[37m[36mINFO[0m[0m::03/23 17:10:55 | Step   30000
+|D             3.761 |G             0.139 |FM            0.109 |R_font        0.569 |F_font        0.641 |R_uni         0.710 |F_uni         0.258
+
+[37m[36mINFO[0m[0m::03/23 17:10:55 | Validation at Epoch = 27.223
+[37m[36mINFO[0m[0m::03/23 17:10:57 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/23 17:29:29 | Step   31000
+|D             3.759 |G             0.166 |FM            0.108 |R_font        0.554 |F_font        0.653 |R_uni         0.705 |F_uni         0.266
+
+[37m[36mINFO[0m[0m::03/23 17:48:01 | Step   32000
+|D             3.762 |G             0.158 |FM            0.108 |R_font        0.562 |F_font        0.649 |R_uni         0.716 |F_uni         0.257
+
+[37m[36mINFO[0m[0m::03/23 18:06:29 | Step   33000
+|D             3.759 |G             0.139 |FM            0.106 |R_font        0.556 |F_font        0.643 |R_uni         0.719 |F_uni         0.246
+
+[37m[36mINFO[0m[0m::03/23 18:25:01 | Step   34000
+|D             3.748 |G             0.133 |FM            0.106 |R_font        0.557 |F_font        0.645 |R_uni         0.725 |F_uni         0.231
+
+[37m[36mINFO[0m[0m::03/23 18:43:30 | Step   35000
+|D             3.754 |G             0.146 |FM            0.106 |R_font        0.553 |F_font        0.648 |R_uni         0.714 |F_uni         0.256
+
+[37m[36mINFO[0m[0m::03/23 19:02:01 | Step   36000
+|D             3.758 |G             0.160 |FM            0.103 |R_font        0.545 |F_font        0.656 |R_uni         0.715 |F_uni         0.257
+
+[37m[36mINFO[0m[0m::03/23 19:20:30 | Step   37000
+|D             3.754 |G             0.159 |FM            0.103 |R_font        0.554 |F_font        0.654 |R_uni         0.707 |F_uni         0.254
+
+[37m[36mINFO[0m[0m::03/23 19:38:58 | Step   38000
+|D             3.754 |G             0.144 |FM            0.102 |R_font        0.546 |F_font        0.647 |R_uni         0.701 |F_uni         0.250
+
+[37m[36mINFO[0m[0m::03/23 19:57:26 | Step   39000
+|D             3.757 |G             0.141 |FM            0.100 |R_font        0.551 |F_font        0.649 |R_uni         0.721 |F_uni         0.234
+
+[37m[36mINFO[0m[0m::03/23 20:15:55 | Step   40000
+|D             3.759 |G             0.143 |FM            0.100 |R_font        0.550 |F_font        0.654 |R_uni         0.717 |F_uni         0.246
+
+[37m[36mINFO[0m[0m::03/23 20:15:55 | Validation at Epoch = 36.298
+[37m[36mINFO[0m[0m::03/23 20:15:57 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/23 20:34:31 | Step   41000
+|D             3.765 |G             0.145 |FM            0.099 |R_font        0.543 |F_font        0.652 |R_uni         0.716 |F_uni         0.240
+
+[37m[36mINFO[0m[0m::03/23 20:53:04 | Step   42000
+|D             3.763 |G             0.155 |FM            0.098 |R_font        0.535 |F_font        0.663 |R_uni         0.716 |F_uni         0.243
+
+[37m[36mINFO[0m[0m::03/23 21:11:34 | Step   43000
+|D             3.764 |G             0.149 |FM            0.096 |R_font        0.530 |F_font        0.658 |R_uni         0.716 |F_uni         0.237
+
+[37m[36mINFO[0m[0m::03/23 21:30:04 | Step   44000
+|D             3.761 |G             0.142 |FM            0.095 |R_font        0.540 |F_font        0.651 |R_uni         0.707 |F_uni         0.245
+
+[37m[36mINFO[0m[0m::03/23 21:48:33 | Step   45000
+|D             3.772 |G             0.157 |FM            0.093 |R_font        0.517 |F_font        0.664 |R_uni         0.714 |F_uni         0.248
+
+[37m[36mINFO[0m[0m::03/23 22:07:06 | Step   46000
+|D             3.770 |G             0.131 |FM            0.093 |R_font        0.529 |F_font        0.652 |R_uni         0.705 |F_uni         0.245
+
+[37m[36mINFO[0m[0m::03/23 22:25:43 | Step   47000
+|D             3.776 |G             0.150 |FM            0.092 |R_font        0.519 |F_font        0.659 |R_uni         0.704 |F_uni         0.248
+
+[37m[36mINFO[0m[0m::03/23 22:44:15 | Step   48000
+|D             3.776 |G             0.150 |FM            0.091 |R_font        0.515 |F_font        0.666 |R_uni         0.700 |F_uni         0.241
+
+[37m[36mINFO[0m[0m::03/23 23:02:44 | Step   49000
+|D             3.778 |G             0.136 |FM            0.090 |R_font        0.518 |F_font        0.655 |R_uni         0.712 |F_uni         0.232
+
+[37m[36mINFO[0m[0m::03/23 23:21:15 | Step   50000
+|D             3.793 |G             0.141 |FM            0.087 |R_font        0.516 |F_font        0.656 |R_uni         0.704 |F_uni         0.248
+
+[37m[36mINFO[0m[0m::03/23 23:21:15 | Validation at Epoch = 45.372
+[37m[36mINFO[0m[0m::03/23 23:21:18 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/23 23:39:48 | Step   51000
+|D             3.790 |G             0.145 |FM            0.087 |R_font        0.501 |F_font        0.662 |R_uni         0.713 |F_uni         0.239
+
+[37m[36mINFO[0m[0m::03/23 23:58:19 | Step   52000
+|D             3.785 |G             0.147 |FM            0.087 |R_font        0.503 |F_font        0.667 |R_uni         0.707 |F_uni         0.235
+
+[37m[36mINFO[0m[0m::03/24 00:16:52 | Step   53000
+|D             3.786 |G             0.141 |FM            0.087 |R_font        0.507 |F_font        0.661 |R_uni         0.715 |F_uni         0.237
+
+[37m[36mINFO[0m[0m::03/24 00:35:25 | Step   54000
+|D             3.787 |G             0.146 |FM            0.086 |R_font        0.507 |F_font        0.664 |R_uni         0.701 |F_uni         0.247
+
+[37m[36mINFO[0m[0m::03/24 00:53:55 | Step   55000
+|D             3.789 |G             0.138 |FM            0.084 |R_font        0.488 |F_font        0.675 |R_uni         0.700 |F_uni         0.225
+
+[37m[36mINFO[0m[0m::03/24 01:12:22 | Step   56000
+|D             3.789 |G             0.146 |FM            0.083 |R_font        0.497 |F_font        0.672 |R_uni         0.714 |F_uni         0.229
+
+[37m[36mINFO[0m[0m::03/24 01:30:50 | Step   57000
+|D             3.791 |G             0.141 |FM            0.082 |R_font        0.490 |F_font        0.671 |R_uni         0.710 |F_uni         0.229
+
+[37m[36mINFO[0m[0m::03/24 01:49:19 | Step   58000
+|D             3.796 |G             0.147 |FM            0.082 |R_font        0.470 |F_font        0.687 |R_uni         0.714 |F_uni         0.221
+
+[37m[36mINFO[0m[0m::03/24 02:07:52 | Step   59000
+|D             3.796 |G             0.159 |FM            0.081 |R_font        0.467 |F_font        0.683 |R_uni         0.705 |F_uni         0.234
+
+[37m[36mINFO[0m[0m::03/24 02:26:24 | Step   60000
+|D             3.803 |G             0.149 |FM            0.079 |R_font        0.466 |F_font        0.682 |R_uni         0.713 |F_uni         0.219
+
+[37m[36mINFO[0m[0m::03/24 02:26:24 | Validation at Epoch = 54.446
+[37m[36mINFO[0m[0m::03/24 02:26:26 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/24 02:44:59 | Step   61000
+|D             3.799 |G             0.135 |FM            0.079 |R_font        0.480 |F_font        0.674 |R_uni         0.709 |F_uni         0.219
+
+[37m[36mINFO[0m[0m::03/24 03:03:30 | Step   62000
+|D             3.798 |G             0.149 |FM            0.080 |R_font        0.466 |F_font        0.686 |R_uni         0.718 |F_uni         0.221
+
+[37m[36mINFO[0m[0m::03/24 03:21:58 | Step   63000
+|D             3.804 |G             0.148 |FM            0.077 |R_font        0.459 |F_font        0.690 |R_uni         0.706 |F_uni         0.216
+
+[37m[36mINFO[0m[0m::03/24 03:40:28 | Step   64000
+|D             3.807 |G             0.161 |FM            0.077 |R_font        0.459 |F_font        0.694 |R_uni         0.708 |F_uni         0.234
+
+[37m[36mINFO[0m[0m::03/24 03:59:02 | Step   65000
+|D             3.807 |G             0.140 |FM            0.076 |R_font        0.454 |F_font        0.687 |R_uni         0.708 |F_uni         0.226
+
+[37m[36mINFO[0m[0m::03/24 04:17:34 | Step   66000
+|D             3.806 |G             0.136 |FM            0.077 |R_font        0.466 |F_font        0.689 |R_uni         0.721 |F_uni         0.205
+
+[37m[36mINFO[0m[0m::03/24 04:36:03 | Step   67000
+|D             3.820 |G             0.143 |FM            0.074 |R_font        0.450 |F_font        0.695 |R_uni         0.714 |F_uni         0.221
+
+[37m[36mINFO[0m[0m::03/24 04:54:36 | Step   68000
+|D             3.815 |G             0.164 |FM            0.074 |R_font        0.442 |F_font        0.706 |R_uni         0.718 |F_uni         0.223
+
+[37m[36mINFO[0m[0m::03/24 05:13:08 | Step   69000
+|D             3.819 |G             0.156 |FM            0.073 |R_font        0.436 |F_font        0.702 |R_uni         0.725 |F_uni         0.210
+
+[37m[36mINFO[0m[0m::03/24 05:31:42 | Step   70000
+|D             3.818 |G             0.173 |FM            0.073 |R_font        0.434 |F_font        0.712 |R_uni         0.715 |F_uni         0.227
+
+[37m[36mINFO[0m[0m::03/24 05:31:42 | Validation at Epoch = 63.521
+[37m[36mINFO[0m[0m::03/24 05:31:44 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/24 05:50:18 | Step   71000
+|D             3.824 |G             0.129 |FM            0.071 |R_font        0.446 |F_font        0.679 |R_uni         0.725 |F_uni         0.218
+
+[37m[36mINFO[0m[0m::03/24 06:08:51 | Step   72000
+|D             3.825 |G             0.145 |FM            0.072 |R_font        0.432 |F_font        0.701 |R_uni         0.714 |F_uni         0.219
+
+[37m[36mINFO[0m[0m::03/29 06:39:27 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume path/to/phase1/weights --phase 2 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 06:39:27 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 06:39:27 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: path/to/phase1/weights
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 06:39:27 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 06:39:27 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 06:55:43 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 06:55:43 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 06:55:43 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 06:55:44 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 06:55:45 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 06:55:47 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 06:55:47 | Start training ...
+[37m[36mINFO[0m[0m::03/29 06:55:52 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 06:55:52 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 06:55:52 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 06:55:52 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 06:55:54 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 06:55:56 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 06:55:56 | Start training ...
+[37m[36mINFO[0m[0m::03/29 06:56:04 | Step   70000
+|D             3.849 |G             0.385 |FM            0.059 |R_font        0.200 |F_font        1.000 |R_uni         0.750 |F_uni         0.000
+
+[37m[36mINFO[0m[0m::03/29 06:56:04 | Validation at Epoch = 63.521
+[37m[36mINFO[0m[0m::03/29 06:56:08 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/29 06:59:03 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 06:59:03 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 06:59:03 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 06:59:03 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 06:59:05 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:00:13 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 07:00:13 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 07:00:13 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 07:00:14 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 07:00:15 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:00:18 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 07:00:18 | Start training ...
+[37m[36mINFO[0m[0m::03/29 07:01:58 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 07:01:58 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 07:01:58 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 07:01:58 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 07:01:59 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:03:12 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 07:03:12 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 07:03:12 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 07:03:12 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 07:03:14 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:03:17 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 07:03:17 | Start training ...
+[37m[36mINFO[0m[0m::03/29 07:03:40 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 07:03:40 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 07:03:40 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 2
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 07:03:41 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 07:03:41 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:03:44 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 07:03:44 | Start training ...
+[37m[36mINFO[0m[0m::03/29 07:06:15 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 07:06:15 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 07:06:15 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 2
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 07:06:16 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 07:06:17 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:06:20 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 07:06:20 | Start training ...
+[37m[36mINFO[0m[0m::03/29 07:06:29 | Step   70000
+|D             3.961 |G             0.111 |FM            0.050 |R_font        0.400 |F_font        0.800 |R_uni         0.500 |F_uni         0.300
+
+[37m[36mINFO[0m[0m::03/29 07:06:29 | Validation at Epoch = 31.775
+[37m[36mINFO[0m[0m::03/29 07:06:32 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/29 07:09:17 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[37m[36mINFO[0m[0m::03/29 07:09:17 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 07:09:17 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 07:09:17 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 07:09:19 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 07:09:20 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[37m[36mINFO[0m[0m::03/29 07:09:20 | Start training ...
+[37m[36mINFO[0m[0m::03/29 07:09:32 | Step   70000
+|D             3.776 |G            -0.023 |FM            0.077 |R_font        0.250 |F_font        0.550 |R_uni         0.750 |F_uni         0.350
+
+[37m[36mINFO[0m[0m::03/29 07:09:32 | Validation at Epoch = 63.521
+[37m[36mINFO[0m[0m::03/29 07:09:36 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/29 07:31:15 | Step   71000
+|D             3.749 |G             0.149 |FM            0.086 |R_font        0.521 |F_font        0.675 |R_uni         0.663 |F_uni         0.259
+
+[37m[36mINFO[0m[0m::03/29 07:50:06 | Step   72000
+|D             3.815 |G             0.140 |FM            0.074 |R_font        0.458 |F_font        0.688 |R_uni         0.704 |F_uni         0.229
+
+[37m[36mINFO[0m[0m::03/29 08:09:06 | Step   73000
+|D             3.823 |G             0.138 |FM            0.071 |R_font        0.445 |F_font        0.685 |R_uni         0.705 |F_uni         0.237
+
+[37m[36mINFO[0m[0m::03/29 08:28:02 | Step   74000
+|D             3.827 |G             0.157 |FM            0.070 |R_font        0.419 |F_font        0.706 |R_uni         0.717 |F_uni         0.228
+
+[37m[36mINFO[0m[0m::03/29 08:46:50 | Step   75000
+|D             3.829 |G             0.138 |FM            0.070 |R_font        0.430 |F_font        0.703 |R_uni         0.710 |F_uni         0.213
+
+[37m[36mINFO[0m[0m::03/29 09:05:35 | Step   76000
+|D             3.839 |G             0.154 |FM            0.069 |R_font        0.414 |F_font        0.706 |R_uni         0.708 |F_uni         0.230
+
+[37m[36mINFO[0m[0m::03/29 09:24:23 | Step   77000
+|D             3.832 |G             0.161 |FM            0.069 |R_font        0.413 |F_font        0.713 |R_uni         0.725 |F_uni         0.211
+
+[37m[36mINFO[0m[0m::03/29 09:43:06 | Step   78000
+|D             3.836 |G             0.147 |FM            0.068 |R_font        0.415 |F_font        0.709 |R_uni         0.730 |F_uni         0.204
+
+[37m[36mINFO[0m[0m::03/29 10:01:51 | Step   79000
+|D             3.835 |G             0.177 |FM            0.068 |R_font        0.406 |F_font        0.728 |R_uni         0.726 |F_uni         0.211
+
+[37m[36mINFO[0m[0m::03/29 10:20:38 | Step   80000
+|D             3.850 |G             0.141 |FM            0.065 |R_font        0.397 |F_font        0.718 |R_uni         0.723 |F_uni         0.187
+
+[37m[36mINFO[0m[0m::03/29 10:20:38 | Validation at Epoch = 72.595
+[37m[36mINFO[0m[0m::03/29 10:20:40 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/29 10:39:30 | Step   81000
+|D             3.841 |G             0.168 |FM            0.066 |R_font        0.386 |F_font        0.727 |R_uni         0.725 |F_uni         0.209
+

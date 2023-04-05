@@ -1,0 +1,84 @@
+[36mINFO[0m::03/17 14:19:19 | Run Argv:
+> train_MX.py cfgs/MX/train.yaml cfgs/data/train/yong_custom.yaml
+[36mINFO[0m::03/17 14:19:19 | Args:
+config_paths  = ['cfgs/MX/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[36mINFO[0m::03/17 14:19:19 | Configs:
+seed: 2
+model: mx
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.001
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/mx
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 1.0
+  ac_gen_w: 1.0
+  ac_cross_w: 0.0
+  indp_exp_w: 1.0
+  indp_fact_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_experts: 6
+  n_emb: 2
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_c: 3
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+Traceback (most recent call last):
+  File "/Users/yongcho/dev/yonggit/Own-My-Geul/fewshot-font-generation/train_MX.py", line 202, in <module>
+    main()
+  File "/Users/yongcho/dev/yonggit/Own-My-Geul/fewshot-font-generation/train_MX.py", line 198, in main
+    train_single(args, cfg)
+  File "/Users/yongcho/dev/yonggit/Own-My-Geul/fewshot-font-generation/train_MX.py", line 171, in train_single
+    trn_loader, val_loaders, trainer = build_trainer(args, cfg)
+  File "/Users/yongcho/dev/yonggit/Own-My-Geul/fewshot-font-generation/train_MX.py", line 61, in build_trainer
+    torch.cuda.set_device(gpu)
+  File "/Users/yongcho/dev/yonggit/Own-My-Geul/ftrans/lib/python3.9/site-packages/torch/cuda/__init__.py", line 326, in set_device
+    torch._C._cuda_setDevice(device)
+AttributeError: module 'torch._C' has no attribute '_cuda_setDevice'

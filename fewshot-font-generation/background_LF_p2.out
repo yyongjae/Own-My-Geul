@@ -1,0 +1,92 @@
+[36mINFO[0m::03/31 06:45:34 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[36mINFO[0m::03/31 06:45:34 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[36mINFO[0m::03/31 06:45:34 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[36mINFO[0m::03/31 06:45:34 | [0] Get dataset ...
+[36mINFO[0m::03/31 06:45:34 | [0] Build model ...
+The weight is force overwrited.
+[36mINFO[0m::03/31 06:45:36 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[36mINFO[0m::03/31 06:45:36 | Start training ...
+Traceback (most recent call last):
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/train_LF.py", line 218, in <module>
+    main()
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/train_LF.py", line 214, in main
+    train_single(args, cfg)
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/train_LF.py", line 187, in train_single
+    trainer.train(trn_loader, val_loaders, cfg.max_iter)
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/LF/phase2_trainer.py", line 133, in train
+    self.ac_backward()
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/base/trainer/base_trainer.py", line 173, in ac_backward
+    frozen_ac_loss.backward(retain_graph=True)
+  File "/home/elicer/Own-My-Geul/clova/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/elicer/Own-My-Geul/clova/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 126.00 MiB (GPU 0; 9.50 GiB total capacity; 9.15 GiB already allocated; 80.00 MiB free; 9.28 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

@@ -1,0 +1,1197 @@
+[37m[36mINFO[0m[0m::03/29 10:36:21 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:36:21 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:36:21 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:36:21 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:36:22 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:36:25 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:36:25 | Start training ...
+[37m[36mINFO[0m[0m::03/29 10:39:57 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:39:57 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:39:57 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:39:57 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:39:57 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:39:59 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:39:59 | Start training ...
+[37m[36mINFO[0m[0m::03/29 10:41:00 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:41:00 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:41:00 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 2
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:41:00 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:41:00 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:41:01 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:41:01 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:41:01 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 2
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:41:01 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:41:01 | Start training ...
+[37m[36mINFO[0m[0m::03/29 10:41:02 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:41:02 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:41:04 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:41:04 | Start training ...
+[37m[36mINFO[0m[0m::03/29 10:49:05 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:49:05 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:49:05 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:49:05 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:49:05 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:49:07 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:49:07 | Start training ...
+[37m[36mINFO[0m[0m::03/29 10:51:50 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:51:50 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:51:50 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:51:50 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:51:50 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:51:53 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:51:53 | Start training ...
+[37m[36mINFO[0m[0m::03/29 10:56:32 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/29 10:56:32 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/29 10:56:32 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/29 10:56:33 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/29 10:56:33 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/29 10:56:34 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/29 10:56:34 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:32:52 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:32:52 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:32:52 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/chn/decomposition.json
+primals: data/chn/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/chn/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:32:52 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:34:52 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:34:52 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:34:52 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:34:52 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:34:52 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:34:53 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:34:53 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:38:06 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:38:06 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:38:06 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:38:07 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:38:07 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:38:10 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:38:10 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:40:01 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:40:01 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:40:01 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:40:01 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:40:01 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:40:03 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:40:03 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:42:50 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:42:50 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:42:50 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 2
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:42:51 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:42:51 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:42:52 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:42:52 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:46:25 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:46:25 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:46:25 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 2
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:46:25 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:46:25 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:46:27 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:46:27 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:47:35 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:47:35 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:47:35 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:47:35 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:47:35 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:47:37 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:47:37 | Start training ...
+[37m[36mINFO[0m[0m::03/30 08:48:08 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/30 08:48:08 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/30 08:48:08 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/30 08:48:08 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/30 08:48:08 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/30 08:48:09 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/30 08:48:09 | Start training ...
+[37m[36mINFO[0m[0m::03/31 06:45:34 | Run Argv:
+> train_LF.py cfgs/LF/p2/train.yaml cfgs/data/train/yong_custom.yaml --resume /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth --phase 2 --work_dir path/to/save/outputs2
+[37m[36mINFO[0m[0m::03/31 06:45:34 | Args:
+config_paths  = ['cfgs/LF/p2/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 2
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/31 06:45:34 | Configs:
+seed: 2
+model: lf
+phase: fact
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 200000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  [36mresume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+[0m  force_resume: True
+  [36mwork_dir: path/to/save/outputs2
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 1.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: 8
+dset: 
+  loader: 
+    batch_size: 1
+    num_workers: 1
+  train: 
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/31 06:45:34 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/31 06:45:34 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/31 06:45:36 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 0)
+[37m[36mINFO[0m[0m::03/31 06:45:36 | Start training ...

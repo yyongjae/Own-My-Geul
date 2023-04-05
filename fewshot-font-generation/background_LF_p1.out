@@ -1,0 +1,140 @@
+[36mINFO[0m::03/29 07:09:17 | Run Argv:
+> train_LF.py cfgs/LF/p1/train.yaml cfgs/data/train/yong_custom.yaml --phase 1 --work_dir path/to/save/outputs
+[36mINFO[0m::03/29 07:09:17 | Args:
+config_paths  = ['cfgs/LF/p1/train.yaml', 'cfgs/data/train/yong_custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[36mINFO[0m::03/29 07:09:17 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth
+  force_resume: False
+  [36mwork_dir: path/to/save/outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[36mINFO[0m::03/29 07:09:17 | [0] Get dataset ...
+[36mINFO[0m::03/29 07:09:19 | [0] Build model ...
+[36mINFO[0m::03/29 07:09:20 | Resumed checkpoint from /home/elicer/Own-My-Geul/fewshot-font-generation/path/to/save/outputs/checkpoints/last.pth (Step 70000)
+[36mINFO[0m::03/29 07:09:20 | Start training ...
+[36mINFO[0m::03/29 07:09:32 | Step   70000
+|D             3.776 |G            -0.023 |FM            0.077 |R_font        0.250 |F_font        0.550 |R_uni         0.750 |F_uni         0.350
+
+/home/elicer/Own-My-Geul/clova/lib/python3.10/site-packages/torch/cuda/memory.py:424: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  warnings.warn(
+[36mINFO[0m::03/29 07:09:32 | Validation at Epoch = 63.521
+[36mINFO[0m::03/29 07:09:36 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[36mINFO[0m::03/29 07:31:15 | Step   71000
+|D             3.749 |G             0.149 |FM            0.086 |R_font        0.521 |F_font        0.675 |R_uni         0.663 |F_uni         0.259
+
+[36mINFO[0m::03/29 07:50:06 | Step   72000
+|D             3.815 |G             0.140 |FM            0.074 |R_font        0.458 |F_font        0.688 |R_uni         0.704 |F_uni         0.229
+
+[36mINFO[0m::03/29 08:09:06 | Step   73000
+|D             3.823 |G             0.138 |FM            0.071 |R_font        0.445 |F_font        0.685 |R_uni         0.705 |F_uni         0.237
+
+[36mINFO[0m::03/29 08:28:02 | Step   74000
+|D             3.827 |G             0.157 |FM            0.070 |R_font        0.419 |F_font        0.706 |R_uni         0.717 |F_uni         0.228
+
+[36mINFO[0m::03/29 08:46:50 | Step   75000
+|D             3.829 |G             0.138 |FM            0.070 |R_font        0.430 |F_font        0.703 |R_uni         0.710 |F_uni         0.213
+
+[36mINFO[0m::03/29 09:05:35 | Step   76000
+|D             3.839 |G             0.154 |FM            0.069 |R_font        0.414 |F_font        0.706 |R_uni         0.708 |F_uni         0.230
+
+[36mINFO[0m::03/29 09:24:23 | Step   77000
+|D             3.832 |G             0.161 |FM            0.069 |R_font        0.413 |F_font        0.713 |R_uni         0.725 |F_uni         0.211
+
+[36mINFO[0m::03/29 09:43:06 | Step   78000
+|D             3.836 |G             0.147 |FM            0.068 |R_font        0.415 |F_font        0.709 |R_uni         0.730 |F_uni         0.204
+
+[36mINFO[0m::03/29 10:01:51 | Step   79000
+|D             3.835 |G             0.177 |FM            0.068 |R_font        0.406 |F_font        0.728 |R_uni         0.726 |F_uni         0.211
+
+[36mINFO[0m::03/29 10:20:38 | Step   80000
+|D             3.850 |G             0.141 |FM            0.065 |R_font        0.397 |F_font        0.718 |R_uni         0.723 |F_uni         0.187
+
+[36mINFO[0m::03/29 10:20:38 | Validation at Epoch = 72.595
+[36mINFO[0m::03/29 10:20:40 | Checkpoint is saved to path/to/save/outputs/checkpoints/last.pth
+
+[36mINFO[0m::03/29 10:39:30 | Step   81000
+|D             3.841 |G             0.168 |FM            0.066 |R_font        0.386 |F_font        0.727 |R_uni         0.725 |F_uni         0.209
+
+Traceback (most recent call last):
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/train_LF.py", line 219, in <module>
+    main()
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/train_LF.py", line 215, in main
+    train_single(args, cfg)
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/train_LF.py", line 188, in train_single
+    trainer.train(trn_loader, val_loaders, cfg.max_iter)
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/LF/phase1_trainer.py", line 121, in train
+    self.add_ac_losses_and_update_stats(
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/LF/phase1_trainer.py", line 201, in add_ac_losses_and_update_stats
+    loss, acc = self.infer_ac(gen_comp_feats, trg_comp_ids)
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/LF/phase1_trainer.py", line 186, in infer_ac
+    acc = utils.accuracy(aux_out, comp_ids)
+  File "/home/elicer/Own-My-Geul/fewshot-font-generation/base/utils/utils.py", line 71, in accuracy
+    corr = (pred == target).sum().item()
+  File "/home/elicer/Own-My-Geul/clova/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 35039) is killed by signal: Terminated. 

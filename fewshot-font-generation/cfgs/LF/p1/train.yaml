@@ -1,0 +1,12 @@
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+
+trainer:
+  resume:
+  work_dir: ./result/lf1
+
+dset:
+  train:
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+  

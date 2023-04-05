@@ -1,0 +1,2 @@
+decomposition: data/kor/decomposition.json   # path to the "decomposition rule" file.
+primals: data/kor/primals.json
