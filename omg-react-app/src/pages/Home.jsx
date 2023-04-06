@@ -27,7 +27,7 @@ function Home(props) {
                     <span style={OMGFontStyle}>OMG</span>
                     <p style={DescriptionFontStyle}>자신의 손글씨를 폰트로 만들어보세요.</p>
                         <Link to={"/main"}>
-                            <Button content={"폰트 만들기"}></Button>
+                            <Button type="big" content={"폰트 만들기"}></Button>
                         </Link>
                 </div>
             </div>
