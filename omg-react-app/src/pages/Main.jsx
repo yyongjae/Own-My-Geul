@@ -19,7 +19,7 @@ const DescriptionStyle = {
 }
 
 const TitleDescriptionDivLayoutStyle = {
-    margin: "10px 0 10px 0"
+    margin: "10px 0 100px 0"
 }
 
 const FontTemplateDivStyle = {
