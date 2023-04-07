@@ -24,14 +24,30 @@ function Button(props) {
         
         // input태그는 display:"none" 을 이용해 안보이게 숨겨준다.
         return (
-            <div>
+            <div className={styles["upload-div"]}>
                 <input type="file" style={{ display: "none" }} ref={imageInput} />
                 <button className={styles["upload"]} onClick={onCickImageUpload}>
-                    <img src={props.icon}/>
-                    <span style={{padding:"0 0 0 10px"}}>{props.content}</span>
+                    <img src={props.icon} alt="oh"/>
+                    <span className={styles["upload-span"]}>{props.content}</span>
                 </button>
             </div>
         );
+    }
+
+    if (props.type === "prev") {
+        return (
+            <button className={styles["prev"]}>
+                <span className={styles["prev-span"]}>{props.content}</span>
+            </button>
+        )
+    }
+
+    if (props.type === "create") {
+        return (
+            <button disabled className={styles["create"]}>
+                <span className={styles["create-span"]}>{props.content}</span>
+            </button>
+        )
     }
 }
 

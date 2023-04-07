@@ -1,3 +1,4 @@
+/* 큰 버튼 */
 .big {
     width: 324px;
     height: 99px;
@@ -23,6 +24,8 @@
     opacity: 65%;
 }
 
+
+/* 손글씨 업로드 버튼 */
 .upload {
     margin: 30px 0 10px 0;
     width: 227px;
@@ -31,14 +34,61 @@
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
     border: none;
     background-color: #F0F0F0;
-    font-size: 24px;
-    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.upload-div {
+    margin: 0 0 200px 0;
+}
+
+.upload-span {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 0 0 10px;
+}
+
 .upload:active {
     box-shadow: 0px 4px 4px rgba(0,0,0,0.8);
     background-color: #989898;
+}
+
+
+/* 이전으로 버튼 */
+.prev {
+    width: 150px;
+    height: 99px;
+    background-color: transparent;
+    border: none;
+    margin-right: auto;
+}
+
+.prev-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.prev-span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.prev:active {
+    color: gray;
+}
+
+
+/* 폰트 만들기 버튼 */
+.create {
+    width: 150px;
+    height: 99px;
+    border-radius: 30px;
+    border: none;
+    background-color: #F4EFFF;
+}
+
+.create-span {
+    font-size: 24px;
+    font-weight: 600;
 }
