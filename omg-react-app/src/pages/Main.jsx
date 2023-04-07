@@ -42,6 +42,10 @@ const Main = () => {
             <div style={FontTemplateDivStyle}>
                 <FontTemplate list={arr}/>
             </div>
+
+            <div>
+                <Button type="upload" content="손글씨 업로드" icon={uploadIcon}/>
+            </div>
         </div>
     );
 };
