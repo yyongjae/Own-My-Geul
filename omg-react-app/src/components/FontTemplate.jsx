@@ -14,7 +14,7 @@ const FontTemplate = (props) => {
         {
             arr.map((elem) => { 
                 return (
-                    <span style={{padding: "12px"}}>{elem}</span>
+                    <span key={elem} style={{padding: "12px"}}>{elem}</span>
                 )
             })
         }

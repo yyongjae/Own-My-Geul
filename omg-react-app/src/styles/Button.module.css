@@ -49,6 +49,12 @@
     padding: 0 0 0 10px;
 }
 
+.upload-file-span {
+    padding: 0 0 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .upload:active {
     box-shadow: 0px 4px 4px rgba(0,0,0,0.8);
     background-color: #989898;
@@ -81,8 +87,9 @@
 
 /* 폰트 만들기 버튼 */
 .create {
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
     width: 150px;
-    height: 99px;
+    height: 90px;
     border-radius: 30px;
     border: none;
     background-color: #F4EFFF;
@@ -91,4 +98,8 @@
 .create-span {
     font-size: 24px;
     font-weight: 600;
+}
+
+.create:active {
+    background-color: #989898;
 }
