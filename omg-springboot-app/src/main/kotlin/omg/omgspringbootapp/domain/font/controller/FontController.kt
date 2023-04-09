@@ -17,16 +17,23 @@ class FontController (private val fontService: FontService) {
     @Operation(summary = "폰트 생성", description = "손글씨 이미지를 업로드하면 폰트가 생성됩니다.")
     @Parameter(name = "MultipartFile", description = "손글씨 이미지")
     @Parameter(name = "String", description = "이미지 이름(삭제 예정)")
-    @PostMapping("/handwriting")
-    fun uploadHandwritingToGCP(
+    @PostMapping("/new")
+    fun createFont(
         @RequestParam("image") image: MultipartFile,
-        @RequestParam("text") text: String
+        @RequestParam("userId") userId: String
     ): ResponseEntity<CommonResponse> {
-        // GCP 업로드
+        // GCP 이미지 업로드
         fontService.uploadHandwriting(
             image,
-            text
+            userId
         )
-        return ResponseEntity.ok(CommonResponse().response("이미지 업로드 성공"))
+
+        // 폰트 생성 요청
+        val font = fontService.createFont(image, "http://localhost:8000/upload")
+
+        // GCP 폰트 업로드
+        fontService.uploadFont(font)
+
+        return ResponseEntity.ok(CommonResponse().response(true,"폰트 생성 성공"))
     }
 }
