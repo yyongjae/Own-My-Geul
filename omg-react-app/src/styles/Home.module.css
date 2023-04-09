@@ -1,4 +1,4 @@
-.components{
+.home {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -8,9 +8,20 @@ body {
     margin: 0;
 }
 
-.description{
+.description {
     display : flex;
     justify-content: center;
     align-items : center;
     margin: auto;
+}
+
+.title {
+    font-size : 128px;
+    font-weight : 600;
+}
+
+.detail {
+    font-size : 24px;
+    font-weight : 400;
+    padding-left : 10px;
 }
