@@ -5,38 +5,8 @@ import uploadIcon from '../assets/upload.svg';
 import { Link } from 'react-router-dom';
 import UploadButton from '../components/UploadButton';
 import FontGenerateButton from '../components/FontGenerateButton';
+import styles from '../styles/Main.module.css'
 import axios from 'axios';
-
-const MainStyle = {
-    padding: "5% 5% 0 5%"
-}
-
-const TitleStyle = {
-    fontSize: "74px",
-    fontWeight: "700"
-}
-
-const DescriptionStyle = {
-    fontSize: "30px",
-    fontWeight: "400"
-}
-
-const TitleDescriptionDivLayoutStyle = {
-    margin: "10px 0 100px 0"
-}
-
-const FontTemplateDivStyle = {
-    margin: "0 auto",
-    backgroundColor: "#F4EFFF",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-}
-
-const BottomButtonDivStyle = {
-    display: "flex",
-    justifyContent: "flex-start"
-}
 
 const Main = () => {
     const [uploadedFile, setUploadedFile] = useState(null);
@@ -65,13 +35,13 @@ const Main = () => {
     };
 
     return (
-        <div style={MainStyle}>
-            <div style={TitleDescriptionDivLayoutStyle}>
-                <span style={TitleStyle}>손글씨 업로드하기</span>
-                <p style={DescriptionStyle}>아래 12글자를 공책이나 테블릿에서 써서 업로드 해주세요.</p>
+        <div className={styles["main"]}>
+            <div className={styles["title"]}>
+                <span>손글씨 업로드하기</span>
+                <p>아래 12글자를 공책이나 테블릿에서 써서 업로드 해주세요.</p>
             </div>
 
-            <div style={FontTemplateDivStyle}>
+            <div className={styles["template"]}>
                 <FontTemplate list={arr} />
             </div>
 
@@ -79,7 +49,7 @@ const Main = () => {
                 <UploadButton onFileUpload={handleFileUpload} content="손글씨 업로드" icon={uploadIcon} />
             </div>
 
-            <div style={BottomButtonDivStyle}>
+            <div className={styles["navigation"]}>
                 <Link style={{ marginRight: "auto" }} to={"/"}>
                     <Button type="prev" content="이전으로" />
                 </Link>
