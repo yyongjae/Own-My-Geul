@@ -1,0 +1,30 @@
+.main {
+    padding: 5% 5% 0 5%;
+}
+
+.title {
+    margin: 10px 0 100px 0;
+}
+
+.title span {
+    font-size: 74px;
+    font-weight: 700;
+}
+
+.title p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.template {
+    margin: 0 auto;
+    background-color: #F4EFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-start;
+}
