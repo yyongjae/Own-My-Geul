@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 import styles from '../styles/Button.module.css'
 
-
 function Button(props) {
+
     if (props.type === "big") {
         return (
             <div className={styles["big-div"]}>
@@ -12,6 +12,14 @@ function Button(props) {
                 </button>
             </div>
         );
+    }
+
+    if (props.type === "prev") {
+        return (
+            <button className={styles["prev"]}>
+                <span className={styles["prev-span"]}>{props.content}</span>
+            </button>
+        )
     }
 }
 
