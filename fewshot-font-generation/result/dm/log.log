@@ -1,0 +1,3514 @@
+[37m[36mINFO[0m[0m::04/01 14:42:38 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/01 14:42:38 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/01 14:42:38 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 5
+      n_font: 5
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/01 14:42:39 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/01 14:44:22 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/01 14:44:22 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/01 14:44:22 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/01 14:44:23 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/01 14:48:06 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/01 14:48:06 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/01 14:48:06 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/01 14:48:07 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 06:34:01 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 06:34:01 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 06:34:01 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 06:34:02 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:03:37 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:03:37 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:03:37 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:03:38 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:04:15 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:04:15 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:04:15 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:04:15 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:07:54 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:07:54 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:07:54 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:07:54 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:08:22 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:08:22 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:08:22 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:08:22 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:08:43 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:08:43 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:08:43 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:08:44 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:10:30 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:10:30 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:10:30 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:10:31 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:20:32 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:20:32 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:20:32 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:20:32 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:20:43 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:20:43 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:20:43 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:20:43 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:22:07 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:22:07 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:22:07 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:22:07 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:24:56 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:24:56 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:24:56 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:24:56 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:26:48 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:26:48 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:26:48 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:26:48 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:27:00 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:27:00 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:27:00 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:27:30 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:27:30 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:27:30 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:27:30 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:27:45 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:27:45 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:27:45 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:27:45 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:28:01 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:28:01 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:28:01 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:28:01 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:28:59 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:28:59 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:28:59 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:29:00 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:30:30 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:30:30 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:30:30 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:30:31 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:33:11 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:33:11 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:33:11 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:33:12 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:33:29 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:33:29 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:33:29 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:33:29 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:33:59 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:33:59 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:33:59 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:34:00 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:54:24 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:54:24 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:54:24 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:54:24 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 07:54:58 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 07:54:58 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 07:54:58 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 07:54:58 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 08:02:47 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 08:02:47 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 08:02:47 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 08:02:48 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 08:03:00 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 08:03:00 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 08:03:00 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 08:03:00 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:21:13 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:21:13 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:21:13 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:21:14 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:22:54 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:22:54 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:22:54 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:22:55 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:23:30 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:23:30 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:23:30 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:23:30 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:30:49 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:30:49 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:30:49 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:30:49 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:32:46 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:32:46 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:32:46 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:32:46 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:38:39 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:38:39 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:38:39 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:38:39 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:41:06 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:41:06 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:41:06 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:41:07 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:44:56 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:44:56 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:44:56 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:44:57 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:47:49 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:47:49 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:47:49 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:47:50 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:48:14 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:48:14 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:48:14 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:48:15 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:49:36 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:49:36 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:49:36 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:49:37 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:52:54 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:52:54 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:52:54 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:52:54 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:53:51 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:53:51 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:53:51 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:53:52 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:55:17 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:55:17 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:55:17 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:55:17 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 16:58:52 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 16:58:52 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 16:58:52 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 16:58:52 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:00:28 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:00:28 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:00:28 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:00:29 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:00:59 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:00:59 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:00:59 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:00:59 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:26:33 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:26:33 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:26:33 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:26:33 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:41:31 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:41:31 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:41:31 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:41:31 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:41:40 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:41:40 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:41:40 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:41:41 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:42:04 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:42:04 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:42:04 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:42:05 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:44:09 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:44:09 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:44:09 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:44:10 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:45:09 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:45:09 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:45:09 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:45:10 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:45:47 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:45:47 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:45:47 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:45:48 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:49:09 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:49:09 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:49:09 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:49:10 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:53:17 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:53:17 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:53:17 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:53:18 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 17:53:58 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 17:53:58 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 17:53:58 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 17:53:59 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::04/08 18:00:20 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/kor_dmfont_png.yaml
+[37m[36mINFO[0m[0m::04/08 18:00:20 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/kor_dmfont_png.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::04/08 18:00:20 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val: 
+    seen_chars: 
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::04/08 18:00:21 | [0] Get dataset ...

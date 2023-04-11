@@ -1,0 +1,80 @@
+[36mINFO[0m::03/16 10:53:11 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/my_custom.yaml
+[36mINFO[0m::03/16 10:53:11 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/my_custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[36mINFO[0m::03/16 10:53:11 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[36mINFO[0m::03/16 10:53:11 | [0] Get dataset ...
+[36mINFO[0m::03/16 10:53:12 | [0] Build model ...
+/home/elicer/.local/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[36mINFO[0m::03/16 10:53:15 | Start training ...
+[36mINFO[0m::03/16 10:53:35 | Step       0
+|D             4.003 |G            -0.795 |FM            0.158 |R_font        0.750 |F_font        0.000 |R_uni         0.375 |F_uni         0.062
+
+/home/elicer/.local/lib/python3.10/site-packages/torch/cuda/memory.py:403: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  warnings.warn(

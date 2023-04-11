@@ -1,0 +1,600 @@
+[37m[36mINFO[0m[0m::03/13 12:23:36 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/custom.yaml
+[37m[36mINFO[0m[0m::03/13 12:23:36 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/13 12:23:36 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/13 12:23:36 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/13 12:23:37 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/13 12:23:39 | Start training ...
+[37m[36mINFO[0m[0m::03/13 12:39:07 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/custom.yaml -n 4
+[37m[36mINFO[0m[0m::03/13 12:39:07 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/custom.yaml']
+nodes         = 4
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 4
+[37m[36mINFO[0m[0m::03/13 12:39:07 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: True
+[37m[36mINFO[0m[0m::03/13 12:43:30 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/custom.yaml -n 4
+[37m[36mINFO[0m[0m::03/13 12:43:30 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/custom.yaml']
+nodes         = 4
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 4
+[37m[36mINFO[0m[0m::03/13 12:43:30 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: True
+[37m[36mINFO[0m[0m::03/13 12:45:52 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/custom.yaml -n 4
+[37m[36mINFO[0m[0m::03/13 12:45:52 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/custom.yaml']
+nodes         = 4
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 4
+[37m[36mINFO[0m[0m::03/13 12:45:52 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: True
+[37m[36mINFO[0m[0m::03/13 12:54:44 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/custom.yaml
+[37m[36mINFO[0m[0m::03/13 12:54:44 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/13 12:54:44 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/chn/ttf
+    chars: data/chn/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/chn/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/chn/val_unseen_chars.json
+      source_path: data/chn/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/chn/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/chn/val_seen_chars.json
+      source_path: data/chn/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/13 12:54:44 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/13 12:55:38 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/custom.yaml
+[37m[36mINFO[0m[0m::03/13 12:55:38 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/13 12:55:38 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/chn/ttf
+    chars: data/chn/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/chn/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/chn/val_unseen_chars.json
+      source_path: data/chn/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/chn/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/chn/val_seen_chars.json
+      source_path: data/chn/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/13 12:55:39 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/13 12:56:04 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/my_custom.yaml
+[37m[36mINFO[0m[0m::03/13 12:56:04 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/my_custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::03/13 12:56:04 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::03/13 12:56:04 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::03/13 12:56:05 | [0] Build model ...
+[37m[36mINFO[0m[0m::03/13 12:56:07 | Start training ...
+[37m[36mINFO[0m[0m::03/13 12:56:24 | Step       0
+|D             4.003 |G            -0.689 |FM            0.157 |R_font        0.750 |F_font        0.000 |R_uni         0.312 |F_uni         0.125
+
+[37m[36mINFO[0m[0m::03/13 13:23:07 | Step    1000
+|D             3.441 |G             1.500 |FM            0.131 |R_font        0.744 |F_font        0.645 |R_uni         0.596 |F_uni         0.627
+
+[37m[36mINFO[0m[0m::03/13 13:49:40 | Step    2000
+|D             3.981 |G             0.018 |FM            0.033 |R_font        0.528 |F_font        0.516 |R_uni         0.625 |F_uni         0.390
+
+[37m[36mINFO[0m[0m::03/13 14:15:53 | Step    3000
+|D             3.953 |G             0.004 |FM            0.036 |R_font        0.564 |F_font        0.506 |R_uni         0.671 |F_uni         0.370
+
+[37m[36mINFO[0m[0m::03/13 14:42:07 | Step    4000
+|D             3.852 |G             0.062 |FM            0.046 |R_font        0.601 |F_font        0.531 |R_uni         0.675 |F_uni         0.438
+
+[37m[36mINFO[0m[0m::03/13 15:08:20 | Step    5000
+|D             3.694 |G             0.209 |FM            0.054 |R_font        0.635 |F_font        0.584 |R_uni         0.648 |F_uni         0.519
+
+[37m[36mINFO[0m[0m::03/13 15:34:41 | Step    6000
+|D             3.541 |G             0.282 |FM            0.062 |R_font        0.699 |F_font        0.593 |R_uni         0.660 |F_uni         0.565
+
+[37m[36mINFO[0m[0m::03/13 16:00:53 | Step    7000
+|D             3.508 |G             0.285 |FM            0.064 |R_font        0.721 |F_font        0.589 |R_uni         0.675 |F_uni         0.554
+
+[37m[36mINFO[0m[0m::03/13 16:27:05 | Step    8000
+|D             3.428 |G             0.362 |FM            0.069 |R_font        0.738 |F_font        0.606 |R_uni         0.663 |F_uni         0.590
+
+[37m[36mINFO[0m[0m::03/13 16:53:24 | Step    9000
+|D             3.369 |G             0.444 |FM            0.073 |R_font        0.753 |F_font        0.625 |R_uni         0.659 |F_uni         0.612
+
+[37m[36mINFO[0m[0m::03/13 17:19:36 | Step   10000
+|D             3.300 |G             0.512 |FM            0.079 |R_font        0.763 |F_font        0.646 |R_uni         0.657 |F_uni         0.629
+
+[37m[36mINFO[0m[0m::03/13 17:19:36 | Validation at Epoch = 9.074
+[37m[36mINFO[0m[0m::03/13 17:19:42 | Checkpoint is saved to result/dm/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/13 17:45:54 | Step   11000
+|D             3.296 |G             0.536 |FM            0.081 |R_font        0.760 |F_font        0.654 |R_uni         0.652 |F_uni         0.630
+
+[37m[36mINFO[0m[0m::03/13 18:12:07 | Step   12000
+|D             3.232 |G             0.596 |FM            0.085 |R_font        0.770 |F_font        0.669 |R_uni         0.641 |F_uni         0.646
+
+[37m[36mINFO[0m[0m::03/13 18:38:20 | Step   13000
+|D             3.237 |G             0.573 |FM            0.091 |R_font        0.778 |F_font        0.663 |R_uni         0.644 |F_uni         0.645
+
+[37m[36mINFO[0m[0m::03/13 19:04:33 | Step   14000
+|D             3.210 |G             0.626 |FM            0.095 |R_font        0.783 |F_font        0.675 |R_uni         0.658 |F_uni         0.650
+
+[37m[36mINFO[0m[0m::03/13 19:30:47 | Step   15000
+|D             3.197 |G             0.621 |FM            0.097 |R_font        0.790 |F_font        0.672 |R_uni         0.677 |F_uni         0.635
+
+[37m[36mINFO[0m[0m::03/13 19:57:00 | Step   16000
+|D             3.182 |G             0.629 |FM            0.101 |R_font        0.794 |F_font        0.675 |R_uni         0.684 |F_uni         0.624
+
+[37m[36mINFO[0m[0m::03/13 20:23:13 | Step   17000
+|D             3.161 |G             0.660 |FM            0.108 |R_font        0.803 |F_font        0.676 |R_uni         0.701 |F_uni         0.619
+
+[37m[36mINFO[0m[0m::03/13 20:49:26 | Step   18000
+|D             3.173 |G             0.653 |FM            0.112 |R_font        0.788 |F_font        0.686 |R_uni         0.716 |F_uni         0.606
+
+[37m[36mINFO[0m[0m::03/13 21:15:39 | Step   19000
+|D             3.165 |G             0.659 |FM            0.117 |R_font        0.792 |F_font        0.687 |R_uni         0.726 |F_uni         0.591
+
+[37m[36mINFO[0m[0m::03/13 21:41:53 | Step   20000
+|D             3.154 |G             0.644 |FM            0.120 |R_font        0.790 |F_font        0.684 |R_uni         0.738 |F_uni         0.568
+
+[37m[36mINFO[0m[0m::03/13 21:41:53 | Validation at Epoch = 18.149
+[37m[36mINFO[0m[0m::03/13 21:41:57 | Checkpoint is saved to result/dm/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::03/13 22:08:11 | Step   21000
+|D             3.130 |G             0.670 |FM            0.124 |R_font        0.797 |F_font        0.694 |R_uni         0.744 |F_uni         0.564
+
+[37m[36mINFO[0m[0m::03/13 22:34:26 | Step   22000
+|D             3.173 |G             0.635 |FM            0.127 |R_font        0.784 |F_font        0.689 |R_uni         0.745 |F_uni         0.547
+
+[37m[36mINFO[0m[0m::03/13 23:00:41 | Step   23000
+|D             3.167 |G             0.621 |FM            0.130 |R_font        0.780 |F_font        0.696 |R_uni         0.750 |F_uni         0.538
+
+[37m[36mINFO[0m[0m::03/13 23:26:54 | Step   24000
+|D             3.167 |G             0.632 |FM            0.132 |R_font        0.787 |F_font        0.692 |R_uni         0.759 |F_uni         0.535
+
+[37m[36mINFO[0m[0m::03/13 23:53:09 | Step   25000
+|D             3.142 |G             0.674 |FM            0.137 |R_font        0.780 |F_font        0.701 |R_uni         0.746 |F_uni         0.545
+
+[37m[36mINFO[0m[0m::03/14 00:19:30 | Step   26000
+|D             3.131 |G             0.685 |FM            0.140 |R_font        0.784 |F_font        0.701 |R_uni         0.753 |F_uni         0.541
+
+[37m[36mINFO[0m[0m::03/14 00:45:52 | Step   27000
+|D             3.117 |G             0.750 |FM            0.148 |R_font        0.781 |F_font        0.713 |R_uni         0.725 |F_uni         0.584
+
+[37m[36mINFO[0m[0m::03/14 01:12:07 | Step   28000
+|D             3.106 |G             0.741 |FM            0.151 |R_font        0.793 |F_font        0.708 |R_uni         0.730 |F_uni         0.564
+
+[37m[36mINFO[0m[0m::03/14 01:38:22 | Step   29000
+|D             3.102 |G             0.784 |FM            0.154 |R_font        0.789 |F_font        0.724 |R_uni         0.713 |F_uni         0.584
+
+[37m[36mINFO[0m[0m::03/14 02:04:36 | Step   30000
+|D             3.144 |G             0.751 |FM            0.154 |R_font        0.782 |F_font        0.713 |R_uni         0.694 |F_uni         0.580
+
+[37m[36mINFO[0m[0m::03/14 02:04:37 | Validation at Epoch = 27.223
+[37m[36mINFO[0m[0m::03/14 02:04:41 | Checkpoint is saved to result/dm/checkpoints/last.pth
+

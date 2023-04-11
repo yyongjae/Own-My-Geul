@@ -1,0 +1,6 @@
+dset:
+  test:
+    extension: png
+    data_dir: data_example/kor/png
+    ref_chars: data/kor/ref_chars.json
+    gen_chars: data/kor/gen_chars.json # <- 수정하면 test 시점에 생성되는 글자 이미지 달라짐

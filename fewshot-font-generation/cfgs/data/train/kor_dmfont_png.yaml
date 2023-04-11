@@ -1,0 +1,19 @@
+dset:   # leave blank
+  loader:
+    batch_size: 4 # 🛠
+    num_workers: 1 # 🛠
+  # 🛠 chn -> kor
+  train:   # leave blank
+    data_dir: data_example/kor/png
+    chars: data/kor/train_chars_png.json
+    extension: png
+  val:
+    seen_chars:
+      data_dir: data_example/kor/png
+      extension: png
+      n_gen: 20
+      n_font: 3
+      chars: data/kor/val_seen_chars_png.json
+      source_path: data/kor/NaNum_GoLyeo.ttf
+      source_ext: ttf
+
