@@ -33,8 +33,7 @@ class FontService {
     lateinit var keyFile: String
 
     fun uploadHandwriting(
-        image: MultipartFile,
-        userId: String
+        image: MultipartFile
     ){
         val credentials = GoogleCredentials.fromStream(FileInputStream(keyFile))
         val storage = StorageOptions.newBuilder().setCredentials(credentials).build().service

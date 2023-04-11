@@ -19,13 +19,11 @@ class FontController (private val fontService: FontService) {
     @Parameter(name = "String", description = "이미지 이름(삭제 예정)")
     @PostMapping("/new")
     fun createFont(
-        @RequestParam("image") image: MultipartFile,
-        @RequestParam("userId") userId: String
+        @RequestParam("handwriting") image: MultipartFile
     ): ResponseEntity<CommonResponse> {
         // GCP 이미지 업로드
         fontService.uploadHandwriting(
-            image,
-            userId
+            image
         )
 
         // 폰트 생성 요청
