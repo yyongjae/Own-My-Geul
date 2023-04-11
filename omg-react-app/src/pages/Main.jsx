@@ -19,7 +19,7 @@ const Main = () => {
 
     const sendImageToServer = async () => {
         const formData = new FormData();
-        formData.append('file', uploadedFile);
+        formData.append('handwriting', uploadedFile);
 
         try {
             const response = await axios.post('http://localhost:8080/api/v1/font/new', formData, {
