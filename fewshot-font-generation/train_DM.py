@@ -102,7 +102,6 @@ def build_trainer(args, cfg, gpu=0):
         )
 
     val_loaders = {}
-
     for key in cfg.dset.val:
         _dset = DMTestDataset(
             transform=TRANSFORM, **cfg.dset.val[key]
