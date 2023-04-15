@@ -7,5 +7,5 @@
 # 고려글꼴 ttf generation
 python inference.py cfgs/DM/eval.yaml cfgs/data/eval/kor_png.yaml \
 --model DM \
---weight /home/elicer/Own-My-Geul/fewshot-font-generation/result/dm/checkpoints/last.pth \
---result_dir ./result/DM_inference_GoLyeo
+--weight /home/elicer/Own-My-Geul/fewshot-font-generation/result/dm/second_training_40000.pth \
+--result_dir ./result/yong

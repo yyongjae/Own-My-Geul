@@ -3,4 +3,4 @@ n_primals: 68   # Number of entire primals.
 
 trainer:
   resume:
-  work_dir: ./result/dm_train_png
+  work_dir: ./result/dm_train_png_omg

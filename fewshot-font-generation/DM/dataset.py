@@ -133,10 +133,14 @@ class DMTestDataset(BaseDataset):
 
     def check_not_unique(self, key, char):
         avail_chars = set(self.key_char_dict[key]) - {char}
-
+        
         dec = self.decomposition[char]
+        # print(f'avail: {avail_chars}')
+        # print(f'dec: {dec}')
+        # print(f'composition: {self.composition}')
         for d in dec:
             if not set(self.composition[d]).intersection(avail_chars):
+                # print(f'{d}들어옴')
                 return False
         return True
 
@@ -144,10 +148,10 @@ class DMTestDataset(BaseDataset):
         key_gen_dict = {}
         # print(f'self.key_char_dict.items() : {self.key_char_dict.items()}')
         for key, chars in self.key_char_dict.items():
-            print(key) # UhBee_charming
-            print(chars) # ['값', '같', '곬', '곶', '깎', '넋', '늪', '닫', '닭', '닻', '됩', '뗌', '략', '몃', '밟', '볘', '뽈', '솩', '쐐', '앉', '않', '얘', '얾', '엌', '옳', '읊', '죡', '쮜', '춰', '츄', '퀭', '틔', '핀', '핥', '훟']
+            # print(f'key: {key}') # UhBee_charming
+            # print(f'chars: {chars}') # ['값', '같', '곬', '곶', '깎', '넋', '늪', '닫', '닭', '닻', '됩', '뗌', '략', '몃', '밟', '볘', '뽈', '솩', '쐐', '앉', '않', '얘', '얾', '엌', '옳', '읊', '죡', '쮜', '춰', '츄', '퀭', '틔', '핀', '핥', '훟']
             _chars = [c for c in chars if self.check_not_unique(key, c)]
-            print(_chars) # []
+            # print(f'_chars: {_chars}') # []
             key_gen_dict[key] = sample(_chars, n_gen) # ✅
 
         self.key_gen_dict = key_gen_dict
