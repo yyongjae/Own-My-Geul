@@ -1,3 +1,4 @@
 clova
 *.pyc
 *.pth
+events
