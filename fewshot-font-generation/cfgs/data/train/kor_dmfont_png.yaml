@@ -14,6 +14,6 @@ dset:   # leave blank
       n_gen: 20
       n_font: 3
       chars: data/kor/val_seen_chars_png.json
-      source_path: data/kor/NaNum_GoLyeo.ttf
-      source_ext: ttf
+      source_path: data_example/kor/png
+      source_ext: png
 
