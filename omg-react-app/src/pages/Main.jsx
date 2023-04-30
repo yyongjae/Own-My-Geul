@@ -22,7 +22,7 @@ const Main = () => {
         formData.append('handwriting', uploadedFile);
 
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/font/new', formData, {
+            const response = await axios.post('https://omg-springboot-app-gqmj4zd7qq-du.a.run.app/api/v1/font/new', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
