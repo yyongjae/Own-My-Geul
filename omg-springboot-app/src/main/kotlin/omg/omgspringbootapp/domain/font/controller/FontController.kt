@@ -27,7 +27,7 @@ class FontController (private val fontService: FontService) {
         )
 
         // 폰트 생성 요청
-        val font = fontService.createFont(image, "http://localhost:8000/upload")
+        val font = fontService.createFont(image, "https://omg-fastapi-app-gqmj4zd7qq-du.a.run.app/upload")
 
         // GCP 폰트 업로드
         fontService.uploadFont(font)
