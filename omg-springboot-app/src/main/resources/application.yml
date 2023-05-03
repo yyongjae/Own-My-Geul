@@ -9,6 +9,9 @@ gcs:
   key-file: /Users/maeng/desktop/gcp/ownmygeul-4719db2125f4.json
 
 
+custom:
+  ai-server-url: ${AI_SERVER_URL}
+
 
 springdoc:
   swagger-ui:
