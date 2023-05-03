@@ -18,11 +18,12 @@ const Main = () => {
     const arr = ["갊", "갸", "곁", "곬", "교", "높", "뉑", "닳", "무", "벚", "숱", "펾"];
 
     const sendImageToServer = async () => {
+        const backendServerUrl = process.env.React_APP_BACKEND_SERVER_URL;
         const formData = new FormData();
         formData.append('handwriting', uploadedFile);
-
+        console.log(backendServerUrl);
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/font/new', formData, {
+            const response = await axios.post(backendServerUrl + '/api/v1/font/new', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
