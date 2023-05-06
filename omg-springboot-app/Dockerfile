@@ -1,4 +1,11 @@
 FROM openjdk:11
-ARG JAR_FILE=build/libs/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+
+WORKDIR /app
+
+COPY . /app
+
+RUN ./gradlew clean build --no-daemon
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "build/libs/omg-spring-boot-app.jar", "--spring.profiles.active=prod"]
