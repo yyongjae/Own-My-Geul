@@ -3,12 +3,12 @@ on:
     branches:
       - dev
     paths:
-      - omg-springboot-app
+      - 'omg-springboot-app/**'
   push:
     branches:
       - dev
     paths:
-      - omg-springboot-app
+      - 'omg-springboot-app/**'
 
 jobs:
   # This workflow contains a single job called "build"
