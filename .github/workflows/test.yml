@@ -1,4 +1,9 @@
 on:
+  pull_request:
+    branches:
+      - dev
+    paths:
+      - omg-springboot-app
   push:
     branches:
       - dev
