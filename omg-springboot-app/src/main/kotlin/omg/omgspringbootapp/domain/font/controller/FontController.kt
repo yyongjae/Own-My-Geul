@@ -38,6 +38,8 @@ class FontController (private val fontService: FontService) {
         // GCP 폰트 업로드
         fontService.uploadFont(font)
 
+        // CI/CD 테스트
+
         return ResponseEntity.ok(CommonResponse().response(true,"폰트 생성 성공"))
     }
 }
