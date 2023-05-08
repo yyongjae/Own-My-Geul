@@ -2,10 +2,8 @@ on:
   pull_request:
     types:
       - closed
-#     branches:
-#       - 'dev'
-#     paths:
-#       - 'omg-springboot-app'
+    branches:
+      - dev
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
