@@ -3,7 +3,6 @@ package omg.omgspringbootapp.domain.font.service
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.cloud.storage.BlobId
 import com.google.cloud.storage.BlobInfo
-import com.google.cloud.storage.Storage
 import com.google.cloud.storage.StorageOptions
 import omg.omgspringbootapp.domain.font.exception.FailFontCreationException
 import omg.omgspringbootapp.global.exception.OmgException
@@ -18,9 +17,6 @@ import org.springframework.stereotype.Service
 import org.springframework.util.LinkedMultiValueMap
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.multipart.MultipartFile
-import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
 import java.util.UUID
 
 @Service
