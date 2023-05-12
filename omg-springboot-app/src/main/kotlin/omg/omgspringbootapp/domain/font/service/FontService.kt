@@ -55,7 +55,7 @@ class FontService {
     fun createFont(
         handwriting: MultipartFile,
         url: String
-    ): File{
+    ): ByteArray? {
         // RestTemplate
         val restTemplate = RestTemplate(SimpleClientHttpRequestFactory())
         val headers = HttpHeaders()
@@ -72,19 +72,14 @@ class FontService {
         // 응답
         if (response.statusCode.is2xxSuccessful) {
             println("폰트 생성 성공")
-            val fontResource = ClassPathResource("/my-font.ttf")
-            val file: File = fontResource.file
-            FileOutputStream(file).use { stream->
-                stream.write(response.body)
-            }
-            return file
+            return response.body
         }
         println("폰트 생성 실패")
         throw FailFontCreationException("폰트 생성에 실패하였습니다.", OmgException.FAIL_FONT_CREATION)
     }
 
     fun uploadFont(
-        font: File
+        font: ByteArray?
     ){
         // 인증을 위한 파일 가져오기
         val resource = ClassPathResource("credentials.json")
@@ -97,11 +92,11 @@ class FontService {
             .setCredentials(credentials)
             .build().service
 
-        val fileName = font.name
+        val fileName = "test.ttf"
         val blobInfo = BlobInfo
             .newBuilder(bucketName, fileName)
             .build()
 
-        storage.create(blobInfo, font.readBytes())
+        storage.create(blobInfo, font)
     }
 }

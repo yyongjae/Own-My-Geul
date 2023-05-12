@@ -39,5 +39,4 @@ out/
 *.idea
 
 ### Custom ###
-**/credentials.json
-**/my-font.ttf
+credentials.json
