@@ -1,11 +1,7 @@
-FROM openjdk:11
+FROM openjdk:11-jdk-slim
 
-WORKDIR /app
+ARG JAR_FILE=build/libs/*-SNAPSHOT.jar
 
-COPY . /app
+COPY ${JAR_FILE} omg-springboot-app
 
-RUN ./gradlew clean build --no-daemon
-
-EXPOSE 8080
-
-CMD ["java", "-jar", "build/libs/omg-spring-boot-app.jar", "--spring.profiles.active=prod"]
+CMD ["java", "-jar", "/omg-springboot-app", "—spring.profiles.active=prod"]
