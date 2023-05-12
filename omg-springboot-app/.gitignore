@@ -37,3 +37,6 @@ out/
 .vscode/
 
 *.idea
+
+### Custom ###
+credentials.json

@@ -4,14 +4,14 @@ spring:
       max-file-size: 20MB
       max-request-size: 20MB
       enabled: true
+
 gcs:
   bucket-name: own_my_geul_bucket
-  key-file: /Users/maeng/desktop/gcp/ownmygeul-4719db2125f4.json
-
+  credentials:
+    location: classpath:credentials.json
 
 custom:
   ai-server-url: ${AI_SERVER_URL}
-
 
 springdoc:
   swagger-ui:
