@@ -72,7 +72,8 @@ class FontService {
         // 응답
         if (response.statusCode.is2xxSuccessful) {
             println("폰트 생성 성공")
-            val file = File("/Users/maeng/desktop/my-font.ttf")
+            val fontResource = ClassPathResource("/my-font.ttf")
+            val file: File = fontResource.file
             FileOutputStream(file).use { stream->
                 stream.write(response.body)
             }
