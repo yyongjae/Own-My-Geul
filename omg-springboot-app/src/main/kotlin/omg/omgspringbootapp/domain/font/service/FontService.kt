@@ -3,12 +3,13 @@ package omg.omgspringbootapp.domain.font.service
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.cloud.storage.BlobId
 import com.google.cloud.storage.BlobInfo
+import com.google.cloud.storage.Storage
 import com.google.cloud.storage.StorageOptions
 import omg.omgspringbootapp.domain.font.exception.FailFontCreationException
-import omg.omgspringbootapp.global.exception.OmgCommonException
 import omg.omgspringbootapp.global.exception.OmgException
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.core.io.ByteArrayResource
+import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
@@ -20,7 +21,6 @@ import org.springframework.web.multipart.MultipartFile
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
-import java.util.Optional
 import java.util.UUID
 
 @Service
@@ -29,16 +29,23 @@ class FontService {
     @Value("\${gcs.bucket-name}")
     lateinit var bucketName: String
 
-    @Value("\${gcs.key-file}")
-    lateinit var keyFile: String
-
     fun uploadHandwriting(
         image: MultipartFile
     ){
-        val credentials = GoogleCredentials.fromStream(FileInputStream(keyFile))
-        val storage = StorageOptions.newBuilder().setCredentials(credentials).build().service
+        // 인증을 위한 파일 가져오기
+        val resource = ClassPathResource("credentials.json")
+        val inputStream = resource.inputStream
+        val credentials = GoogleCredentials.fromStream(inputStream)
+
+        // Storage 객체 생성
+        val storage = StorageOptions
+            .newBuilder()
+            .setCredentials(credentials)
+            .build().service
+
         val blobId = BlobId.of(bucketName, image.originalFilename+UUID.randomUUID().toString())
-        val blobInfo = BlobInfo.newBuilder(blobId)
+        val blobInfo = BlobInfo
+            .newBuilder(blobId)
             .setContentType(image.contentType)
             .build()
 
@@ -78,10 +85,21 @@ class FontService {
     fun uploadFont(
         font: File
     ){
-        val credentials = GoogleCredentials.fromStream(FileInputStream(keyFile))
-        val storage = StorageOptions.newBuilder().setCredentials(credentials).build().service
+        // 인증을 위한 파일 가져오기
+        val resource = ClassPathResource("credentials.json")
+        val inputStream = resource.inputStream
+        val credentials = GoogleCredentials.fromStream(inputStream)
+
+        // Storage 객체 생성
+        val storage = StorageOptions
+            .newBuilder()
+            .setCredentials(credentials)
+            .build().service
+
         val fileName = font.name
-        val blobInfo = BlobInfo.newBuilder(bucketName, fileName).build()
+        val blobInfo = BlobInfo
+            .newBuilder(bucketName, fileName)
+            .build()
 
         storage.create(blobInfo, font.readBytes())
     }
