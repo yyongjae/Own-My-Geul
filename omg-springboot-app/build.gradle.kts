@@ -31,6 +31,7 @@ dependencies {
 	implementation("com.google.cloud:google-cloud-storage:2.2.1")
 	implementation ("org.springdoc:springdoc-openapi-ui:1.6.9")
 	implementation ("com.h2database:h2")
+	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 tasks.withType<KotlinCompile> {
