@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import FontTemplate from '../components/FontTemplate';
 import Button from '../components/Button';
 import uploadIcon from '../assets/upload.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import UploadButton from '../components/UploadButton';
 import FontGenerateButton from '../components/FontGenerateButton';
 import styles from '../styles/Main.module.css'
@@ -17,22 +17,28 @@ const Main = () => {
     };
     const arr = ["갊", "갸", "곁", "곬", "교", "높", "뉑", "닳", "무", "벚", "숱", "펾"];
 
+    const navigate = useNavigate();
+
     const sendImageToServer = async () => {
         const backendServerUrl = process.env.React_APP_BACKEND_SERVER_URL;
         const formData = new FormData();
         formData.append('handwriting', uploadedFile);
         console.log(backendServerUrl);
-        try {
-            const response = await axios.post(backendServerUrl + '/api/v1/font/new', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
+        axios.post(backendServerUrl + '/api/v1/font/new', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
+            responseType: 'blob'
+        })
+        .then(response => {
+            const data = response.data;
+            console.log(data); // 외부 URL로 전송된 파일의 정보 출력
 
-            console.log(response.data); // 외부 URL로 전송된 파일의 정보 출력
-        } catch (error) {
-            console.error(error);
-        }
+            navigate('/result', {state: {data}});
+        })
+        .catch(error => {
+            alert("오류가 발생했습니다.")
+        })
     };
 
     return (
