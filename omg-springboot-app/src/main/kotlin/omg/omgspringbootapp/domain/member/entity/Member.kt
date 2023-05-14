@@ -20,14 +20,14 @@ class Member(
     @Column(columnDefinition = "BINARY(16)")
     var id: UUID? = null
 
-    @Column(name = "name")
+    @Column(nullable = false, name = "name")
     var name: String = name
         protected set
 
-    @Column(name = "password")
+    @Column(nullable = false, name = "password")
     var password: String = password
         protected set
 
-    @Column(updatable = false)
+    @Column(nullable = false, updatable = false)
     val email: String = email
 }
