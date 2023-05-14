@@ -13,7 +13,8 @@ import javax.persistence.MappedSuperclass
 class BaseTimeEntity {
     @CreatedDate
     @Column(nullable = false, updatable = false)
-    val createdAt: LocalDateTime = LocalDateTime.now()
+    var createdAt: LocalDateTime = LocalDateTime.now()
+        protected set
 
     @LastModifiedDate
     @Column(nullable = false)
