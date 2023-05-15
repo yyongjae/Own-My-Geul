@@ -1,0 +1,4 @@
+clova
+*.pyc
+*.pth
+events
