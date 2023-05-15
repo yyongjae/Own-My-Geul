@@ -11,6 +11,8 @@ import torch
 
 from base.dataset import BaseTrainDataset, BaseDataset, sample
 
+from PIL import Image
+
 
 class DMTrainDataset(BaseTrainDataset):
     def __init__(self, data_dir, n_primals, decomposition, chars, transform=None, n_in_s=3, n_in_min=1, n_in_max=10, extension="png"):
@@ -25,10 +27,10 @@ class DMTrainDataset(BaseTrainDataset):
 
     def sample_style(self, key, n_sample):
         avail_chars = self.key_char_dict[key]
-        picked_chars = sample(avail_chars, n_sample)
-        picked_comp_ids = [self.decomposition[c] for c in picked_chars]
+        picked_chars = sample(avail_chars, n_sample) # picked_chars : ['햳', '쯍', '윻']
+        picked_comp_ids = [self.decomposition[c] for c in picked_chars] # picked_comp_ids : [[18, 22, 47], [13, 36, 61], [11, 36, 67]]
 
-        imgs = torch.cat([self.get_img(key, c) for c in picked_chars])
+        imgs = torch.cat([self.get_img(key, c) for c in picked_chars]) # imgs.shape : torch.Size([12, 128, 128])
 
         return imgs, picked_chars, picked_comp_ids
 
@@ -43,10 +45,19 @@ class DMTrainDataset(BaseTrainDataset):
         for char in avail_chars:
             comp_ids = self.decomposition[char]
             comps_binary = seen_binary[comp_ids]
+            # print(f'seen_binary : {seen_binary}')
+            # print(f'seen_binary[comp_ids] : {seen_binary[comp_ids]}')
+
+
+            # print(f'char : {char}')
+            # print(f'comp_ids : {comp_ids}')
+            # print(f'comps_binary.sum() : {comps_binary.sum()}')
+            
             if comps_binary.sum() == len(comp_ids) and len(self.char_key_dict[char]) >= 2:
                 avail_comb_chars.append(char)
                 avail_comb_ids.append(comp_ids)
-
+        # print(f'avail_comb_chars : {avail_comb_chars}')
+        # print(f'avail_comb_ids : {avail_comb_ids}')
         return avail_comb_chars, avail_comb_ids
 
     def check_and_sample(self, trg_chars, trg_comp_ids):
@@ -64,6 +75,32 @@ class DMTrainDataset(BaseTrainDataset):
     def __getitem__(self, index):
         key_idx = index % self.n_fonts
         key = self.keys[key_idx]
+
+        '''
+            key_idx : 2 / key : pride
+            key_idx : 1 / key : mom2dau
+            key_idx : 0 / key : NaNum_GoLyeo
+            batch_size = 4 이기 때문에 폰트별로 4글자씩 train
+        '''
+        (style_imgs, style_chars, style_decs) = self.sample_style(key, n_sample=self.n_in_s)
+        '''
+            batch size = 2 일 때
+            len(style_imgs) : 12
+            len(style_chars) : 3
+            len(style_decs) : 3
+        '''
+        
+
+        avail_chars = set(self.key_char_dict[key]) - set(style_chars)
+        # print(f'self.key_char_dict[key] : {self.key_char_dict[key]}')
+        # print(f'avail_chars : {avail_chars}')
+        # print(f'style_decs : {style_decs}')
+
+        trg_chars, trg_decs = self.get_available_combinations(avail_chars, style_decs)
+        # print(f'trg_chars : {trg_chars}')
+        # print(f'trg_decs : {trg_decs}')
+
+        # return None
 
         while True:
             (style_imgs, style_chars, style_decs) = self.sample_style(key, n_sample=self.n_in_s)

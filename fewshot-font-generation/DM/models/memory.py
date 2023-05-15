@@ -28,6 +28,14 @@ class DynamicMemory:
         self.reset()
 
     def write(self, style_ids, comp_ids, sc_feats):
+        # print(f'len(style_ids) : {len(style_ids)}')
+        # print(f'len(comp_ids) : {len(comp_ids)}')
+        # print(f'len(sc_feats) : {len(sc_feats)}')
+        # print(f'style_ids.shape : {style_ids.shape}')
+        # print(f'comp_ids.shape : {comp_ids.shape}')
+        # print(f'sc_feats.shape : {sc_feats.shape}')
+
+        # print(f'style_ids : {style_ids}')
         assert len(style_ids) == len(comp_ids) == len(sc_feats), "Input sizes are different"
 
         for style_id, comp_ids_char, sc_feats_char in zip(style_ids, comp_ids, sc_feats):

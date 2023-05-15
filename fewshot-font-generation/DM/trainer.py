@@ -48,8 +48,31 @@ class DMTrainer(BaseTrainer):
         self.clear_losses()
 
         self.logger.info("Start training ...")
+        
+        '''
+        getitem 형식
+        ret = {
+                "ref_imgs": style_imgs,
+                "ref_decs": torch.LongTensor(style_decs),
+                "ref_fids": key_idx.repeat(len(style_imgs)),
+                "trg_imgs": trg_imgs,
+                "trg_decs": torch.LongTensor(trg_decs),
+                "trg_fids": key_idx.repeat(len(trg_imgs)),
+                "trg_cids": trg_char_ids
+            }
+        '''
+        # print('✅ loader 체크')
+        # ret = next(iter(loader))
+        # print(f'ret["ref_imgs"] : {ret["ref_imgs"].shape}')
+        # print(f'ret["ref_decs"] : {ret["ref_decs"].shape}')
+        # print(f'ret["ref_fids"] : {ret["ref_fids"].shape}')
+        # print(f'ret["trg_imgs"] : {ret["trg_imgs"].shape}')
+        # print(f'ret["trg_decs"] : {ret["trg_decs"].shape}')
+        # print(f'ret["trg_fids"] : {ret["trg_fids"].shape}')
+        # print(f'ret["trg_cids"] : {ret["trg_cids"].shape}')
 
         for batch in cyclize(loader):
+            
             epoch = self.step // len(loader)
             if self.use_ddp and (self.step % len(loader)) == 0:
                 loader.sampler.set_epoch(epoch)

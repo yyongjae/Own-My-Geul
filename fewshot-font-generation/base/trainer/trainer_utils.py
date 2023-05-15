@@ -12,9 +12,11 @@ from scipy.optimize import linear_sum_assignment
 
 def cyclize(loader):
     """ Cyclize loader """
+    i = 0
     while True:
         for x in loader:
             yield x
+        i += 1
 
 
 def has_bn(model):
