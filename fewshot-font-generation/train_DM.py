@@ -27,6 +27,7 @@ from DM.trainer import DMTrainer
 
 
 TRANSFORM = transforms.Compose([
+    transforms.Grayscale(), # 수정한 내용임
     transforms.Resize((128, 128)),
     transforms.ToTensor(),
     transforms.Normalize([0.5], [0.5])
