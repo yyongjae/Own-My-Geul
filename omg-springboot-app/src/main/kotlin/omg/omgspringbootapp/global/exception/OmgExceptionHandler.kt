@@ -25,9 +25,7 @@ class OmgExceptionHandler {
         log.error("Exception Message : " + e.message)
 
         val bindingResult = e.bindingResult
-
         val fieldError = bindingResult.fieldError
-
         val errorMessage = fieldError?.defaultMessage ?: "잘못된 형식이 포함되어 있습니다."
 
         return ResponseEntity.ok(CommonResponse().response(false, errorMessage))
@@ -37,6 +35,6 @@ class OmgExceptionHandler {
     fun handleException(e: Exception): ResponseEntity<CommonResponse>{
         log.error("Exception Message : " + e.message)
 
-        return ResponseEntity.ok(CommonResponse().response(false, OmgException.INTERNAL_SERVER_ERROR.message) )
+        return ResponseEntity.ok(CommonResponse().response(false, OmgException.INTERNAL_SERVER_ERROR.message))
     }
 }
