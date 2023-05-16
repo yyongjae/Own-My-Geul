@@ -41,6 +41,7 @@ dependencies {
 	implementation ("org.springdoc:springdoc-openapi-ui:1.6.9")
 	implementation ("com.h2database:h2")
 	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation ("org.springframework.boot:spring-boot-starter-validation")
 }
 
 tasks.withType<KotlinCompile> {
