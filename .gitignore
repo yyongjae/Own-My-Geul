@@ -2,3 +2,7 @@ clova
 *.pyc
 *.pth
 events
+fewshot-font-generation/data/kor/NaNum_GoLyeo
+test.mv.db
+test.trace.db
+.DS_Store
