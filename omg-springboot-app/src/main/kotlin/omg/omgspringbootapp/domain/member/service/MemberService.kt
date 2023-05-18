@@ -1,8 +1,11 @@
 package omg.omgspringbootapp.domain.member.service
 
-import omg.omgspringbootapp.domain.member.dto.MemberFormDTO
+import omg.omgspringbootapp.domain.member.dto.request.LoginRequest
+import omg.omgspringbootapp.domain.member.dto.request.JoinRequest
+import omg.omgspringbootapp.domain.member.dto.response.LoginResponse
 import omg.omgspringbootapp.domain.member.entity.Member
 import omg.omgspringbootapp.domain.member.exception.NoSuchMemberException
+import omg.omgspringbootapp.domain.member.exception.NotMatchPassword
 import omg.omgspringbootapp.domain.member.repository.MemberRepository
 import omg.omgspringbootapp.global.exception.OmgException
 import org.springframework.stereotype.Service
@@ -12,9 +15,22 @@ import java.util.*
 class MemberService(
     private val memberRepository: MemberRepository
 ) {
-    fun join(memberFormDTO: MemberFormDTO): UUID? {
-        val member = memberRepository.save(memberFormDTO.toEntity())
+    fun join(joinRequest: JoinRequest): UUID? {
+        val member = memberRepository.save(joinRequest.toEntity())
         return member.id
+    }
+
+    fun login(loginRequest: LoginRequest): LoginResponse {
+        val member = findByEmail(loginRequest.email)
+
+        if (member.password != loginRequest.password) {
+            throw NotMatchPassword("비밀번호가 일치하지 않습니다.", OmgException.NOT_MATCH_PASSWORD)
+        }
+
+        return LoginResponse(
+            member.email,
+            member.name
+        )
     }
 
     fun findById(id: UUID): Member {
