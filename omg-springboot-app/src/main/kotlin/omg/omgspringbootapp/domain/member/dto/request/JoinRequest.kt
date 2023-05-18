@@ -1,10 +1,10 @@
-package omg.omgspringbootapp.domain.member.dto
+package omg.omgspringbootapp.domain.member.dto.request
 
 import omg.omgspringbootapp.domain.member.entity.Member
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank
 
-data class MemberFormDTO(
+data class JoinRequest(
     @field: Email(message = "이메일 형식에 맞춰서 작성했는지 확인하세요.")
     @field: NotBlank(message = "이메일은 필수 입력 항목입니다.")
     var email: String,
