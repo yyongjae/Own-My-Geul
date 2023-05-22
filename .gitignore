@@ -1,5 +1,5 @@
 clova
 diff
 *.pyc
-.pdf
-.png
+*.ckpt
+*.png
