@@ -16,8 +16,8 @@ from attrdict import AttrDict
 import yaml
 
 
-def img_pre_pros(img_path):
-    pil_image = Image.open(img_path)
+def img_pre_pros(img_path, image_size):
+    pil_image = Image.open(img_path).resize((image_size, image_size))
     pil_image.load()
     pil_image = pil_image.convert("RGB")
     arr = np.array(pil_image)
@@ -94,7 +94,7 @@ def main():
         ch_idx += cfg.batch_size
 
         model_kwargs["y"] = classes
-        img = th.tensor(img_pre_pros(sty_img_path), requires_grad=False).cuda().repeat(cfg.batch_size, 1, 1, 1)
+        img = th.tensor(img_pre_pros(sty_img_path, cfg.image_size), requires_grad=False).cuda().repeat(cfg.batch_size, 1, 1, 1)
         sty_feat = model.sty_encoder(img)
         model_kwargs["sty"] = sty_feat
         if cfg.stroke_path is not None:
@@ -111,6 +111,8 @@ def main():
                     assert len(char_stroke) == 32
                     chars_stroke = th.cat((chars_stroke, th.tensor(char_stroke).reshape([1, 32])), dim=0)
             f.close()
+            chars_stroke = chars_stroke.to('cuda')
+            print(chars_stroke.device, classes.device)
             model_kwargs["stroke"] = chars_stroke[classes].to(dist_util.dev())
         if classifier_free:
             if cfg.stroke_path is not None:

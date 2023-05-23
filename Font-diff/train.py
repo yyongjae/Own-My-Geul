@@ -11,6 +11,9 @@ from utils.train_util import TrainLoop
 import torch as th
 from attrdict import AttrDict
 import yaml
+import gc
+gc.collect()
+th.cuda.empty_cache()
 
 def main():
     parser = argparse.ArgumentParser()
@@ -29,10 +32,12 @@ def main():
     cfg.__delattr__('sty_encoder_path')
     cfg.__delattr__('classifier_free')
 
+    print(f"""::---------::  CFG  ::---------::
+    {cfg}""")
     dist_util.setup_dist()
 
-    model_save_dir = cfg.model_save_dir  
-
+    model_save_dir = cfg.model_save_dir+'/'+cfg.exp_name
+    
     if not os.path.exists(model_save_dir):
         os.mkdir(model_save_dir)
 
@@ -71,7 +76,6 @@ def main():
         stroke_path=cfg.stroke_path,
         classifier_free=classifier_free,
     )
-
     logger.log("training...")
     TrainLoop(
         model=model,

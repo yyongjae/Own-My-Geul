@@ -1,5 +1,4 @@
-clova
-diff
 *.pyc
 *.ckpt
 *.png
+*.ttf

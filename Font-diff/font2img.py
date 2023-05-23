@@ -36,12 +36,12 @@ def draw_example(ch, src_font, canvas_size, x_offset, y_offset):
 
 data_dir = args.ttf_path
 data_root = pathlib.Path(data_dir)
-print(data_root)
+print(f'data_root:{data_root}')
 
 all_image_paths = list(data_root.glob('*.*'))  # *.ttf TTF
 all_image_paths = [str(path) for path in all_image_paths]
 total_num = len(all_image_paths)
-print(total_num)
+print(f'total_num:{total_num}')
 
 seq = list()
 
@@ -67,7 +67,7 @@ for idx, (label, item) in enumerate(zip(range(len(all_image_paths)),all_image_pa
     img_cnt = 0
     for (chara, cnt) in zip(characters, range(len(characters))):
         img = draw_example(chara, src_font, args.img_size, (args.img_size-args.chara_size)/2, (args.img_size-args.chara_size)/2)
-        path_full = os.path.join(args.save_path, 'id_%d'%(label))
+        path_full = os.path.join(args.save_path, item.split('/')[-1].split('.')[0])
         if not os.path.exists(path_full):
             os.mkdir(path_full)
         if np.sum(np.array(img) / 255.) < 18000:
