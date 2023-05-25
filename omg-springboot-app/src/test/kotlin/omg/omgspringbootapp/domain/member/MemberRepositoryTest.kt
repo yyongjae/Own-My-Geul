@@ -1,4 +1,4 @@
-package omg.omgspringbootapp.member
+package omg.omgspringbootapp.domain.member
 
 import omg.omgspringbootapp.domain.member.entity.Member
 import omg.omgspringbootapp.domain.member.repository.MemberRepository
