@@ -2,6 +2,8 @@ package omg.omgspringbootapp.global.utils.jwt
 
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.security.Keys
+import omg.omgspringbootapp.global.exception.OmgException
+import omg.omgspringbootapp.global.exception.jwt.InvalidTokenException
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.nio.charset.StandardCharsets
@@ -47,7 +49,7 @@ class JwtUtil(
                 .body
             UUID.fromString(claims.subject.toString())
         } catch (ex: Exception) {
-            null
+            throw InvalidTokenException("유효하지 않은 토큰입니다.", OmgException.INVALID_TOKEN)
         }
     }
 
@@ -58,5 +60,15 @@ class JwtUtil(
         } catch (ex: Exception) {
             false
         }
+    }
+
+    fun resolveToken(bearerToken: String): String {
+        val token = bearerToken.substringAfter("Bearer ", "")
+
+        require(token.isNotEmpty()) {
+            throw IllegalArgumentException("토큰의 헤더가 적절하지 않습니다.")
+        }
+
+        return token
     }
 }

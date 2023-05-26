@@ -31,6 +31,13 @@ class OmgExceptionHandler {
         return ResponseEntity.ok(CommonResponse().response(false, errorMessage))
     }
 
+    @ExceptionHandler(IllegalArgumentException::class) // validation 에러
+    fun handleIllegalArgumentException(e: IllegalArgumentException): ResponseEntity<CommonResponse>{
+        log.error("Exception Message : " + e.message)
+
+        return ResponseEntity.ok(e.message?.let { CommonResponse().response(false, it) })
+    }
+
     @ExceptionHandler(Exception::class)
     fun handleException(e: Exception): ResponseEntity<CommonResponse>{
         log.error("Exception Message : " + e.message)
