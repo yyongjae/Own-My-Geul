@@ -29,7 +29,7 @@ internal class JwtUtilTest @Autowired constructor(
         val accessToken = jwtUtil.generateAccessToken(memberId)
 
         /** when **/
-        val memberIdFromToken = jwtUtil.getUserIdFromToken(accessToken)
+        val memberIdFromToken = jwtUtil.getMemberIdFromToken(accessToken)
 
         /** then **/
         assertThat(memberIdFromToken)

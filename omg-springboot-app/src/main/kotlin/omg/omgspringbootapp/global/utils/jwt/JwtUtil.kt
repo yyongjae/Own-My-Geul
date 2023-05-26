@@ -40,7 +40,7 @@ class JwtUtil(
             .compact()
     }
 
-    fun getUserIdFromToken(token: String): UUID? {
+    fun getMemberIdFromToken(token: String): UUID? {
         return try {
             val claims = jwtParser
                 .parseClaimsJws(token) // 서명 있는 경우엔 Jws 사용
