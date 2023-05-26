@@ -1,5 +1,6 @@
 package omg.omgspringbootapp.global.utils
 
+import omg.omgspringbootapp.global.utils.jwt.JwtUtil
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue

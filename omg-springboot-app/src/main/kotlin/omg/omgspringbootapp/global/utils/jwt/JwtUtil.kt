@@ -1,4 +1,4 @@
-package omg.omgspringbootapp.global.utils
+package omg.omgspringbootapp.global.utils.jwt
 
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.security.Keys
