@@ -17,7 +17,7 @@ class JwtUtil(
     private val jwtSecret: String
 ) {
     companion object {
-        private const val ACCESS_TOKEN_VALIDATION_SECOND = 1000L * 2
+        private const val ACCESS_TOKEN_VALIDATION_SECOND = 1000L * 60 * 60 * 2
         private const val REFRESH_TOKEN_VALIDATION_SECOND = 1000L * 60 * 60 * 24 * 2
     }
 
@@ -49,6 +49,7 @@ class JwtUtil(
                 .body
             UUID.fromString(claims.subject.toString())
         } catch (ex: Exception) {
+            ex.printStackTrace() // 보안 상 유효하지 않은 토큰 정도로 처리
             throw InvalidTokenException("유효하지 않은 토큰입니다.", OmgException.INVALID_TOKEN)
         }
     }
