@@ -14,6 +14,10 @@ data class JoinRequest(
     val name: String
 ) {
     fun toEntity(): Member {
-        return Member(email, password, name)
+        return Member(
+            password = password,
+            name = name,
+            email = email
+        )
     }
 }

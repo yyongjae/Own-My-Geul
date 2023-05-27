@@ -27,15 +27,20 @@ class MemberService(
         return member.id
     }
 
+    @Transactional
     fun login(loginRequest: LoginRequest): LoginResponse {
         val member = findByEmail(loginRequest.email)
         val memberId = member.id!! // null이 아님을 확신할 때 사용
 
+        // 비밀번호 확인
         checkPassword(member, loginRequest)
 
         // access token, refresh token 발급
         val accessToken = jwtUtil.generateAccessToken(memberId)
         val refreshToken = jwtUtil.generateRefreshToken(memberId)
+
+        // refresh token 저장
+        member.updateRefreshToken(refreshToken)
 
         val memberInfo = MemberInfo(
             member.name
