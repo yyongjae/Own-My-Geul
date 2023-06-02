@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/homeBackgroundImage.png'
 import BackgroundImage from "../components/BackgroundImage";
 import Button from '../components/Button';
+import LoginButton from '../components/buttons/LoginButton';
 import styles from "../styles/Home.module.css"
 
 // TODO
@@ -22,10 +24,12 @@ function Home(props) {
                             <input name="password" type="password" className={styles.pw_input} placeholder="비밀번호를 입력하세요"></input>
                         </div>
                     </div>
-                    <Button type="login" content={"로그인"}></Button>
+                    <LoginButton content={"로그인"}></LoginButton>
                     <div className={styles.join}>
                         <div>계정이 없으신가요?</div>
-                        <Button type="join" content={"회원가입"}></Button>
+                        <Link to="/join">
+                            <Button type="join" content={"회원가입"}></Button>
+                        </Link>
                     </div>
                 </div>
             </div>
