@@ -10,24 +10,21 @@ import javax.persistence.Id
 
 @Entity
 class Member(
-    email: String,
-    password: String,
-    name: String
-): BaseTimeEntity() {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     @Column(columnDefinition = "BINARY(16)")
-    var id: UUID? = null
+    var id: UUID? = null,
 
-    @Column(nullable = false, name = "name")
-    var name: String = name
-        protected set
+    var name: String,
 
-    @Column(nullable = false, name = "password")
-    var password: String = password
-        protected set
+    var password: String,
 
-    @Column(nullable = false, updatable = false)
-    val email: String = email
+    val email: String,
+
+    var refreshToken: String? = null
+): BaseTimeEntity() {
+    fun updateRefreshToken(refreshToken: String) {
+        this.refreshToken = refreshToken
+    }
 }

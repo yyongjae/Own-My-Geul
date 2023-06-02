@@ -33,15 +33,20 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	compileOnly("org.projectlombok:lombok")
-	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.h2database:h2")
 	implementation("com.google.cloud:google-cloud-storage:2.2.1")
 	implementation ("org.springdoc:springdoc-openapi-ui:1.6.9")
 	implementation ("com.h2database:h2")
 	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	// validation
 	implementation ("org.springframework.boot:spring-boot-starter-validation")
+
+	// jwt
+	implementation ("io.jsonwebtoken:jjwt-api:0.11.2")
+	implementation ("io.jsonwebtoken:jjwt-impl:0.11.2")
+	implementation ("io.jsonwebtoken:jjwt-jackson:0.11.2")
 }
 
 tasks.withType<KotlinCompile> {

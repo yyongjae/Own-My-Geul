@@ -1,13 +1,12 @@
 package omg.omgspringbootapp.domain.member.dto.response
 
-import javax.validation.constraints.Email
+import omg.omgspringbootapp.global.dto.TokenInfo
 import javax.validation.constraints.NotBlank
 
 data class LoginResponse(
-    @field: Email
     @field: NotBlank
-    val email: String,
+    val memberInfo: MemberInfo,
     @field: NotBlank
-    val name: String
-) {
+    val tokenInfo: TokenInfo
+){
 }

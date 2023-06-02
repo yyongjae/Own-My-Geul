@@ -1,4 +1,4 @@
-package omg.omgspringbootapp.member
+package omg.omgspringbootapp.domain.member
 
 import omg.omgspringbootapp.domain.member.dto.request.JoinRequest
 import omg.omgspringbootapp.domain.member.dto.request.LoginRequest
