@@ -33,7 +33,6 @@ body {
 .textForm {
     border-bottom: 2px solid #adadad;
     margin: 30px;
-    padding: 10px 10px;
 }
   
   
@@ -47,6 +46,10 @@ body {
     font-weight: 600;
 }
 
+.id_input:focus {
+    outline: none;
+}
+
 .pw_input {
     width: 100%;
     border:none;
@@ -55,6 +58,10 @@ body {
     height:25px;
     background: none;
     font-weight: 600;
+}
+
+.pw_input:focus {
+    outline: none;
 }
 
 .join {

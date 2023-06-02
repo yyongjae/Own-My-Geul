@@ -1,0 +1,100 @@
+.join {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.prev {
+    width: 80%;
+    margin: auto; 
+}
+
+.title {
+    font-size: 58px;
+    font-weight: 800;
+}
+
+/*member sign in*/
+.input {
+    width: 460px;
+    margin: auto; 
+    padding: 0 20px;
+}
+
+.button {
+    width: 460px;
+    /* border: 1px solid #000; */
+    margin: auto; /*중앙 정렬*/
+    padding: 0 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.button .cancel {
+    margin-right: 170px;
+    color: #aeaeae;
+    border:none;
+    border-radius:10px;
+    padding:11px;
+}
+
+.button .cancel:active {
+    color:#000000;
+}
+
+.button .join {
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    padding:11px;
+}
+
+.button .join:active {
+    background-color:#7c7c7c;
+}
+
+
+
+.placehold-text {
+    display: block; /*span 으로 감싸서 크기영역을 블록요소로 만들어ㅜ저야한다*/
+    position:relative;
+    /* border: 1px solid #000; */
+}
+
+.pw_combination_correct {
+    display: none; 
+    color: #31D05E; 
+    font-weight: bold;
+}
+
+.pw_combination_wrong {
+    display: none; 
+    color: #d92742; 
+    font-weight: bold; 
+}
+
+.pw_correct {
+    display: none;
+    color: #31D05E; 
+    font-weight: bold;
+}
+
+.pw_wrong {
+    display: none; 
+    color: #d92742; 
+    font-weight: bold;
+}
+
+.username_empty {
+    display: none; 
+    color: #d92742; 
+    font-weight: bold; 
+}
