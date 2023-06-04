@@ -23,18 +23,16 @@ const Main = () => {
         const backendServerUrl = process.env.React_APP_BACKEND_SERVER_URL;
         const formData = new FormData();
         formData.append('handwriting', uploadedFile);
-        console.log(backendServerUrl);
         axios.post(backendServerUrl + '/api/v1/font/new', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
-            },
-            responseType: 'blob'
+            }
         })
         .then(response => {
-            const data = response.data;
-            console.log(data); // 외부 URL로 전송된 파일의 정보 출력
-
-            navigate('/result', {state: {data}});
+            if (response.data.status === true){
+                navigate('/result');
+            }
+            alert("오류가 발생했습니다.")
         })
         .catch(error => {
             alert("오류가 발생했습니다.")
