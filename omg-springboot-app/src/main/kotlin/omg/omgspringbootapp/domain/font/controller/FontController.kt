@@ -32,12 +32,12 @@ class FontController (private val fontService: FontService) {
             image
         )
 
-        // 폰트 생성 요청
-        val fontByteArray = fontService.createFont(image, aiServerUrl.plus("/upload"))
+//        // 폰트 생성 요청
+//        val fontByteArray = fontService.createFont(image, aiServerUrl.plus("/upload"))
+//
+//        // GCP 폰트 업로드
+//        fontService.uploadFont(fontByteArray)
 
-        // GCP 폰트 업로드
-        fontService.uploadFont(fontByteArray)
-
-        return ResponseEntity.ok(CommonResponse().response(true,"폰트 생성 성공"))
+        return ResponseEntity.ok(CommonResponse().response(true,"폰트 업로드 성공"))
     }
 }
