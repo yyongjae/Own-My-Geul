@@ -1,0 +1,21 @@
+.field {
+    margin :50px 0; /*상하로 좀 띄워주기*/
+}
+
+b {
+    /* border: 1px solid #000; */
+    display: block; /*수직 정렬하기 */
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+input {
+    border: 1px solid #dadada;
+    padding: 15px;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+input:focus {
+    outline: 1px solid #7DA0F9;
+}

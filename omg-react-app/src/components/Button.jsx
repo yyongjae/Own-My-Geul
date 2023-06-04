@@ -21,6 +21,14 @@ function Button(props) {
             </button>
         )
     }
+
+    if (props.type === "join") {
+        return (
+            <button className={styles["join"]}>
+                회원가입
+            </button>
+        )
+    }
 }
 
 export default Button;

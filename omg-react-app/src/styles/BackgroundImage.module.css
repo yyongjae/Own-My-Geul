@@ -3,3 +3,9 @@
     width: 50vw;
     height: 100vh;
 }
+
+@media (max-width: 900px) {
+    .image {
+        display: none;
+    }
+}
