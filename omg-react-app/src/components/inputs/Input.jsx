@@ -6,7 +6,7 @@ function Input(props) {
         return (
             <div className={styles.field}>
                 <b>{props.content}</b>
-                <input type="text"/>
+                <input name="email" type="text"/>
             </div>
         );
     }
@@ -15,7 +15,7 @@ function Input(props) {
         return (
             <div className={styles.field}>
                 <b>{props.content}</b>
-                <input type="password"/>
+                <input name="password" type="password"/>
             </div>
         );
     }
@@ -24,7 +24,7 @@ function Input(props) {
         return (
             <div className={styles.field}>
                 <b>{props.content}</b>
-                <input type="text"/>
+                <input name="name" type="text"/>
             </div>
         );
     }
