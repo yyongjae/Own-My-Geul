@@ -5,6 +5,7 @@ import omg.omgspringbootapp.domain.member.dto.request.JoinRequest
 import omg.omgspringbootapp.domain.member.dto.response.LoginResponse
 import omg.omgspringbootapp.domain.member.dto.response.MemberInfo
 import omg.omgspringbootapp.domain.member.entity.Member
+import omg.omgspringbootapp.domain.member.exception.MemberAlreadyExistException
 import omg.omgspringbootapp.domain.member.exception.NoSuchMemberException
 import omg.omgspringbootapp.domain.member.exception.NotMatchPassword
 import omg.omgspringbootapp.domain.member.repository.MemberRepository
@@ -23,8 +24,11 @@ class MemberService(
 ) {
     @Transactional
     fun join(joinRequest: JoinRequest): UUID? {
-        val member = memberRepository.save(joinRequest.toEntity())
-        return member.id
+        if (checkEmail(joinRequest.email)) {
+            val member = memberRepository.save(joinRequest.toEntity())
+            return member.id
+        }
+        throw MemberAlreadyExistException("이미 가입된 이메일입니다.", OmgException.MEMBER_ALREADY_EXIST)
     }
 
     @Transactional
@@ -75,5 +79,10 @@ class MemberService(
             .orElseThrow{
                 NoSuchMemberException("회원이 존재하지 않습니다.", OmgException.NO_SUCH_MEMBER)
             }
+    }
+
+    fun checkEmail(email: String): Boolean {
+        return memberRepository.findByEmail(email)
+            .isEmpty
     }
 }
