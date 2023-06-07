@@ -24,6 +24,34 @@
     opacity: 65%;
 }
 
+.start {
+    width: 324px;
+    height: 99px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border: none;
+    background-color: #F4EFFF;
+}
+
+.start:active {
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.8);
+    background-color: #A7A1B4;
+}
+
+.start-div {
+    margin-top: 186px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-span {
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 65%;
+}
+
 /* 로그인 버튼 */
 .login {
     width: 275px;
