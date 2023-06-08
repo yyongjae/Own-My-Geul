@@ -60,7 +60,7 @@ const Main = () => {
                 <div style={{display:"inline-block"}}>1. 템플릿을 다운로드해주세요. </div>
                 <DownloadButton handleDownload={downloadTemplate} content="다운로드하기"></DownloadButton>
                 <div>2. 다운로드한 템플릿의 칸에 맞게 글씨를 적어주세요.</div>
-                <div>3. 80글자 모두 적은 뒤, 다시 업로드하면 끝!</div>
+                <div>3. 80글자 모두 적은 뒤, 이미지로 업로드하면 끝!</div>
             </div>
 
             <div>
