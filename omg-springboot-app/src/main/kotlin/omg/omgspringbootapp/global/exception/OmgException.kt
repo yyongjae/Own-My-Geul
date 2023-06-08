@@ -13,6 +13,7 @@ enum class OmgException (
     FAIL_FONT_CREATION("BE102","Cannot Create Font"),
     // 200번대 토큰
     INVALID_TOKEN("BE200", "Invalid Token"),
+    EXPIRED_ACCESS_TOKEN("BE201", "Expired Access Token"),
     // 500번대 서버에러
     INTERNAL_SERVER_ERROR("BE500", "Internal Server Error")
 }

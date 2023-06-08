@@ -11,6 +11,7 @@ import omg.omgspringbootapp.domain.member.exception.NotMatchPassword
 import omg.omgspringbootapp.domain.member.repository.MemberRepository
 import omg.omgspringbootapp.global.dto.TokenInfo
 import omg.omgspringbootapp.global.exception.OmgException
+import omg.omgspringbootapp.global.exception.jwt.InvalidTokenException
 import omg.omgspringbootapp.global.utils.jwt.JwtUtil
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -47,7 +48,8 @@ class MemberService(
         member.updateRefreshToken(refreshToken)
 
         val memberInfo = MemberInfo(
-            member.name
+            member.name,
+            memberId.toString()
         )
         val tokenInfo = TokenInfo(
             "Bearer",
@@ -59,6 +61,26 @@ class MemberService(
             memberInfo,
             tokenInfo
         )
+    }
+
+    fun reissueToken(id: String): TokenInfo{
+        val memberUUID = UUID.fromString(id)
+
+        val member = findById(memberUUID)
+        val refreshToken = member.refreshToken ?: throw InvalidTokenException("토큰이 존재하지 않습니다.", OmgException.INVALID_TOKEN)
+
+        val isValid = jwtUtil.validateToken(refreshToken)
+
+        if (isValid) {
+            val accessToken = jwtUtil.generateAccessToken(memberUUID)
+            return TokenInfo(
+                "Bearer",
+                accessToken,
+                refreshToken
+            )
+        }
+
+        throw InvalidTokenException("유효하지 않은 토큰입니다.", OmgException.INVALID_TOKEN)
     }
 
     private fun checkPassword(member: Member, loginRequest: LoginRequest) {

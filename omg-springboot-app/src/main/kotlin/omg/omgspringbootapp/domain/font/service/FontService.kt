@@ -40,7 +40,7 @@ class FontService {
             .setCredentials(credentials)
             .build().service
 
-        val blobId = BlobId.of(bucketName, memberId+UUID.randomUUID().toString())
+        val blobId = BlobId.of(bucketName, memberId)
         val blobInfo = BlobInfo
             .newBuilder(blobId)
             .setContentType(image.contentType)
