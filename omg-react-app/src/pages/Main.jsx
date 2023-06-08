@@ -36,15 +36,28 @@ const Main = () => {
                     alert(response.data.message)
                     navigate('/result');
                 }
-                else {
-                    alert(response.data.message)
+                else{
+                    if (response.data.exception.errorCode === "BE201") {
+                        reissueAccessToken();
+                    }
+                    if (response.data.exception.errorCode === "BE200") {
+                        alert(response.data.message)
+                        localStorage.removeItem("name")
+                        localStorage.removeItem("accessToken")
+                        localStorage.removeItem("isLoggedIn")
+                        navigate('/')
+                    }
                 }
             })
             .catch(error => {
-                alert("오류가 발생했습니다.")
+                alert("치명적인 오류가 발생했습니다.")
             })
         }
     };
+
+    const reissueAccessToken = () => {
+        // api.get('/api/v1/member/reissue/'+localStorage.getItem(""))
+    }
 
     const downloadTemplate = () => {
         const link = document.createElement('a');

@@ -27,7 +27,7 @@ function Home(props) {
         // 서버로 POST 요청 보내기
         axios.post(backendServerUrl + '/api/v1/member/login', data)
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 // 요청이 성공한 경우 처리
                 if (response.data.status === true) {
                     const memberInfo = response.data.data.memberInfo
@@ -37,6 +37,7 @@ function Home(props) {
                     localStorage.setItem("name", memberInfo.name)
                     localStorage.setItem("accessToken", accessToken)
                     localStorage.setItem("isLoggedIn", true)
+                    localStorage.setItem("id", memberInfo.id)
                     
                     navigate('/')
                 }
