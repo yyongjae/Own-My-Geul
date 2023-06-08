@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.multipart.MultipartFile
+import org.springframework.web.multipart.MultipartHttpServletRequest
 
 @RestController
 @RequestMapping("/api/v1/font")
@@ -25,11 +26,14 @@ class FontController (private val fontService: FontService) {
     @Parameter(name = "String", description = "이미지 이름(삭제 예정)")
     @PostMapping("/new")
     fun createFont(
-        @RequestParam("handwriting") image: MultipartFile
+        @RequestParam("handwriting") image: MultipartFile,
+        httpServletRequest: MultipartHttpServletRequest
     ): ResponseEntity<CommonResponse> {
+        val memberId = httpServletRequest.getAttribute("memberId").toString() ?: ""
+
         // GCP 이미지 업로드
         fontService.uploadHandwriting(
-            image
+            image, memberId
         )
 
 //        // 폰트 생성 요청

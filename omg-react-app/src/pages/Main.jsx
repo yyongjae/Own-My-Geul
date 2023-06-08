@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import FontTemplate from '../components/FontTemplate';
 import Button from '../components/Button';
 import uploadIcon from '../assets/upload.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import UploadButton from '../components/UploadButton';
 import FontGenerateButton from '../components/FontGenerateButton';
 import styles from '../styles/Main.module.css'
-import axios from 'axios';
+import api from '../axiosInstance';
+import DownloadButton from '../components/buttons/DownloadButton';
+import template from '../assets/omgTemplate.pdf'
 
 const Main = () => {
     const [uploadedFile, setUploadedFile] = useState(null);
@@ -15,39 +16,64 @@ const Main = () => {
         // 파일 업로드 처리 로직
         setUploadedFile(file);
     };
-    const arr = ["갊", "갸", "곁", "곬", "교", "높", "뉑", "닳", "무", "벚", "숱", "펾"];
 
     const navigate = useNavigate();
 
     const sendImageToServer = async () => {
-        const backendServerUrl = process.env.React_APP_BACKEND_SERVER_URL;
-        const formData = new FormData();
-        formData.append('handwriting', uploadedFile);
-        axios.post(backendServerUrl + '/api/v1/font/new', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-        .then(response => {
-            if (response.data.status === true){
-                navigate('/result');
-            }
-            alert("오류가 발생했습니다.")
-        })
-        .catch(error => {
-            alert("오류가 발생했습니다.")
-        })
+        if (uploadedFile === null) {
+            alert("먼저 파일을 업로드해주세요!")
+        }
+        else{
+            const formData = new FormData();
+            formData.append('handwriting', uploadedFile);
+            api.post('/api/v1/font/new', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                }
+            })
+            .then(response => {
+                if (response.data.status === true){
+                    alert(response.data.message)
+                    navigate('/result');
+                }
+                else{
+                    if (response.data.exception.errorCode === "BE201") {
+                        reissueAccessToken();
+                    }
+                    if (response.data.exception.errorCode === "BE200") {
+                        alert(response.data.message)
+                        localStorage.removeItem("name")
+                        localStorage.removeItem("accessToken")
+                        localStorage.removeItem("isLoggedIn")
+                        navigate('/')
+                    }
+                }
+            })
+            .catch(error => {
+                alert("치명적인 오류가 발생했습니다.")
+            })
+        }
     };
+
+    const reissueAccessToken = () => {
+        // api.get('/api/v1/member/reissue/'+localStorage.getItem(""))
+    }
+
+    const downloadTemplate = () => {
+        const link = document.createElement('a');
+        link.href = template;
+        link.download = 'OMG_템플릿.pdf';
+        link.click();
+      };
 
     return (
         <div className={styles["main"]}>
-            <div className={styles["title"]}>
-                <span>손글씨 업로드하기</span>
-                <p>아래 12글자를 공책이나 테블릿에서 써서 업로드 해주세요.</p>
-            </div>
-
-            <div className={styles["template"]}>
-                <FontTemplate list={arr} />
+            <div className={styles["description"]}>
+                <p className={styles["title"]}>손글씨 업로드하기</p>
+                <div style={{display:"inline-block"}}>1. 템플릿을 다운로드해주세요. </div>
+                <DownloadButton handleDownload={downloadTemplate} content="다운로드하기"></DownloadButton>
+                <div>2. 다운로드한 템플릿의 칸에 맞게 글씨를 적어주세요.</div>
+                <div>3. 80글자 모두 적은 뒤, 이미지로 업로드하면 끝!</div>
             </div>
 
             <div>

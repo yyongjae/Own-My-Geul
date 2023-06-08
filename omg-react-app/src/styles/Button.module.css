@@ -5,12 +5,12 @@
     border-radius: 30px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
     border: none;
-    background-color: #F4EFFF;
+    background-color: #637fe4;
 }
 
 .big:active {
     box-shadow: 0px 4px 4px rgba(0,0,0,0.8);
-    background-color: #A7A1B4;
+    background-color: #aab9ee;
 }
 
 .big-div {
@@ -21,7 +21,35 @@
 .big-span {
     font-size: 24px;
     font-weight: 600;
-    opacity: 65%;
+    color: white;
+}
+
+.start {
+    width: 324px;
+    height: 99px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border: none;
+    background-color: #637fe4;
+}
+
+.start:active {
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.8);
+    background-color: #aab9ee;
+}
+
+.start-div {
+    margin-top: 186px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-span {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
 }
 
 /* 로그인 버튼 */
@@ -132,14 +160,27 @@
     height: 90px;
     border-radius: 30px;
     border: none;
-    background-color: #F4EFFF;
+    background-color: #637fe4;
 }
 
 .create-span {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
 }
 
 .create:active {
-    background-color: #989898;
+    background-color: #aab9ee;
+}
+
+.download {
+    background-color: white;
+    border: none;
+    font-size: 32px;
+    color: #637fe4; 
+    font-weight: 800
+}
+
+.download:active {
+    color: #aab9ee;
 }

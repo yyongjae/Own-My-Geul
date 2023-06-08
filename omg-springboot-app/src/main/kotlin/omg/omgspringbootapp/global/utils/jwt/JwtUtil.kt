@@ -1,5 +1,6 @@
 package omg.omgspringbootapp.global.utils.jwt
 
+import io.jsonwebtoken.ExpiredJwtException
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.security.Keys
 import omg.omgspringbootapp.global.exception.OmgException
@@ -48,8 +49,11 @@ class JwtUtil(
                 .parseClaimsJws(token) // 서명 있는 경우엔 Jws 사용
                 .body
             UUID.fromString(claims.subject.toString())
+        } catch (ex: ExpiredJwtException) {
+            ex.printStackTrace() // 보안 상 유효하지 않은 토큰 정도로 처토리
+            throw InvalidTokenException("Access Token이 만료되었습니다.", OmgException.EXPIRED_ACCESS_TOKEN)
         } catch (ex: Exception) {
-            ex.printStackTrace() // 보안 상 유효하지 않은 토큰 정도로 처리
+            ex.printStackTrace() // 보안 상 유효하지 않은 토큰 정도로 처토리
             throw InvalidTokenException("유효하지 않은 토큰입니다.", OmgException.INVALID_TOKEN)
         }
     }
@@ -67,7 +71,7 @@ class JwtUtil(
         val token = bearerToken.substringAfter("Bearer ", "")
 
         require(token.isNotEmpty()) {
-            throw IllegalArgumentException("토큰의 헤더가 적절하지 않습니다.")
+            throw InvalidTokenException("토큰의 헤더가 적절하지 않습니다.", OmgException.INVALID_TOKEN)
         }
 
         return token

@@ -2,18 +2,19 @@
     padding: 5% 5% 0 5%;
 }
 
-.title {
-    margin: 10px 0 100px 0;
+.description {
+    margin: 10px 0 60px 0;
 }
 
-.title span {
+.title {
     font-size: 74px;
     font-weight: 700;
 }
 
-.title p {
+.description div {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
+    margin: 3px;
 }
 
 .template {

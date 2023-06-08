@@ -10,6 +10,11 @@ class JwtInterceptor(
 ): HandlerInterceptor {
 
     override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {
+        // Preflight인 경우 허용
+        if(request.method.equals("OPTIONS")) {
+            return true;
+        }
+
         val bearerToken = request.getHeader("Authorization") ?: throw IllegalArgumentException("필수 헤더값이 없습니다.")
         val token = jwtUtil.resolveToken(bearerToken)
         val memberId = jwtUtil.getMemberIdFromToken(token)

@@ -26,7 +26,8 @@ class FontService {
     lateinit var bucketName: String
 
     fun uploadHandwriting(
-        image: MultipartFile
+        image: MultipartFile,
+        memberId: String
     ){
         // 인증을 위한 파일 가져오기
         val resource = ClassPathResource("credentials.json")
@@ -39,7 +40,7 @@ class FontService {
             .setCredentials(credentials)
             .build().service
 
-        val blobId = BlobId.of(bucketName, image.originalFilename+UUID.randomUUID().toString())
+        val blobId = BlobId.of(bucketName, memberId)
         val blobInfo = BlobInfo
             .newBuilder(blobId)
             .setContentType(image.contentType)

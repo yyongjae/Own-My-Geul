@@ -21,9 +21,14 @@ body {
     text-align: center;
 }
 
+.greeting {
+    font-size: 55px;
+    font-weight: 600;
+}
+
 .detail {
     font-size : 32px;
-    font-weight : 400;
+    font-weight : 500;
 }
 
 .login_input {

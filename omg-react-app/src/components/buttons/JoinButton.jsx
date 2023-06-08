@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from '../../styles/JoinButton.module.css'
 
-function JoinButton(props) {
+function JoinButton({handleJoin, content}) {
     return (
         <div className={styles["join-div"]}>
-            <button className={styles["join"]}>
-                <span className={styles["join-span"]}>{props.content}</span>
+            <button onClick={handleJoin} className={styles["join"]}>
+                <span className={styles["join-span"]}>{content}</span>
             </button>
         </div>
     )
