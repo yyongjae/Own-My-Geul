@@ -45,6 +45,7 @@ function Home(props) {
             .catch(error => {
                 // 요청이 실패한 경우 처리
                 console.error(error);
+                alert("요청에 실패하였습니다.")
             });
     }
 
