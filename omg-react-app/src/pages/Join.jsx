@@ -28,7 +28,7 @@ function Join(props) {
         // 서버로 POST 요청 보내기
         axios.post(backendServerUrl + '/api/v1/member/join', data)
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             // 요청이 성공한 경우 처리
             if (response.data.status === true) {
                 navigate('/')
