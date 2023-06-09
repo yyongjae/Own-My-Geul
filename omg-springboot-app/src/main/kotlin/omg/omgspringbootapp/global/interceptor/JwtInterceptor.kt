@@ -1,6 +1,7 @@
 package omg.omgspringbootapp.global.interceptor
 
 import omg.omgspringbootapp.global.utils.jwt.JwtUtil
+import org.springframework.web.cors.CorsUtils
 import org.springframework.web.servlet.HandlerInterceptor
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
@@ -11,7 +12,7 @@ class JwtInterceptor(
 
     override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {
         // Preflight인 경우 허용
-        if(request.method.equals("OPTIONS")) {
+        if(CorsUtils.isPreFlightRequest(request)) {
             return true;
         }
 
