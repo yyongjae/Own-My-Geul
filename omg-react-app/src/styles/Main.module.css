@@ -1,0 +1,31 @@
+.main {
+    padding: 5% 5% 0 5%;
+}
+
+.description {
+    margin: 10px 0 60px 0;
+}
+
+.title {
+    font-size: 74px;
+    font-weight: 700;
+}
+
+.description div {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 3px;
+}
+
+.template {
+    margin: 0 auto;
+    background-color: #F4EFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-start;
+}

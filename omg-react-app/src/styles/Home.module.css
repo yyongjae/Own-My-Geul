@@ -1,0 +1,78 @@
+.home {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+}
+
+.description {
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    margin: auto;
+}
+
+.title {
+    font-size : 128px;
+    font-weight : 600;
+    text-align: center;
+}
+
+.greeting {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.detail {
+    font-size : 32px;
+    font-weight : 500;
+}
+
+.login_input {
+    margin-top: 80px;
+}
+
+.textForm {
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+}
+  
+  
+.id_input {
+    width: 100%;
+    border:none;
+    outline:none;
+    font-size:24px;
+    height:25px;
+    background: none;
+    font-weight: 600;
+}
+
+.id_input:focus {
+    outline: none;
+}
+
+.pw_input {
+    width: 100%;
+    border:none;
+    outline:none;
+    font-size:24px;
+    height:25px;
+    background: none;
+    font-weight: 600;
+}
+
+.pw_input:focus {
+    outline: none;
+}
+
+.join {
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    font-size : 24px;
+    margin: 20px 0 20px 0;
+}

@@ -1,0 +1,215 @@
+[36mINFO[0m::03/16 16:18:21 | Run Argv:
+> train_DM.py cfgs/DM/train.yaml cfgs/data/train/my_custom.yaml
+[36mINFO[0m::03/16 16:18:21 | Args:
+config_paths  = ['cfgs/DM/train.yaml', 'cfgs/data/train/my_custom.yaml']
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[36mINFO[0m::03/16 16:18:21 | Configs:
+seed: 2
+model: dm
+decomposition: data/kor/decomposition_DM.json
+n_primals: 68
+max_iter: 300000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  work_dir: result/dm
+  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  n_heads: 3
+dset: 
+  loader: 
+    batch_size: 4
+    num_workers: 1
+  train: 
+    n_in_s: 3
+    n_in_min: 1
+    n_in_max: 4
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[36mINFO[0m::03/16 16:18:21 | [0] Get dataset ...
+[36mINFO[0m::03/16 16:18:22 | [0] Build model ...
+/home/elicer/.local/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+[36mINFO[0m::03/16 16:18:24 | Start training ...
+[36mINFO[0m::03/16 16:18:42 | Step       0
+|D             4.000 |G            -0.863 |FM            0.158 |R_font        0.750 |F_font        0.000 |R_uni         0.500 |F_uni         0.188
+
+/home/elicer/.local/lib/python3.10/site-packages/torch/cuda/memory.py:403: FutureWarning: torch.cuda.max_memory_cached has been renamed to torch.cuda.max_memory_reserved
+  warnings.warn(
+[36mINFO[0m::03/16 16:45:32 | Step    1000
+|D             3.366 |G             1.775 |FM            0.126 |R_font        0.742 |F_font        0.684 |R_uni         0.519 |F_uni         0.717
+
+[36mINFO[0m::03/16 17:11:56 | Step    2000
+|D             3.993 |G            -0.119 |FM            0.029 |R_font        0.634 |F_font        0.398 |R_uni         0.593 |F_uni         0.400
+
+[36mINFO[0m::03/16 17:38:09 | Step    3000
+|D             3.991 |G            -0.114 |FM            0.031 |R_font        0.615 |F_font        0.419 |R_uni         0.684 |F_uni         0.336
+
+[36mINFO[0m::03/16 18:04:31 | Step    4000
+|D             3.972 |G            -0.003 |FM            0.038 |R_font        0.537 |F_font        0.517 |R_uni         0.695 |F_uni         0.339
+
+[36mINFO[0m::03/16 18:30:43 | Step    5000
+|D             3.919 |G            -0.020 |FM            0.048 |R_font        0.584 |F_font        0.494 |R_uni         0.691 |F_uni         0.361
+
+[36mINFO[0m::03/16 18:56:59 | Step    6000
+|D             3.769 |G             0.088 |FM            0.059 |R_font        0.651 |F_font        0.528 |R_uni         0.693 |F_uni         0.439
+
+[36mINFO[0m::03/16 19:23:13 | Step    7000
+|D             3.662 |G             0.201 |FM            0.065 |R_font        0.664 |F_font        0.572 |R_uni         0.687 |F_uni         0.489
+
+[36mINFO[0m::03/16 19:49:27 | Step    8000
+|D             3.579 |G             0.208 |FM            0.068 |R_font        0.718 |F_font        0.556 |R_uni         0.712 |F_uni         0.477
+
+[36mINFO[0m::03/16 20:15:41 | Step    9000
+|D             3.530 |G             0.275 |FM            0.070 |R_font        0.721 |F_font        0.589 |R_uni         0.728 |F_uni         0.498
+
+[36mINFO[0m::03/16 20:41:54 | Step   10000
+|D             3.469 |G             0.296 |FM            0.073 |R_font        0.751 |F_font        0.585 |R_uni         0.741 |F_uni         0.496
+
+[36mINFO[0m::03/16 20:41:54 | Validation at Epoch = 9.074
+[36mINFO[0m::03/16 20:42:00 | Checkpoint is saved to result/dm/checkpoints/last.pth
+
+[36mINFO[0m::03/16 21:08:13 | Step   11000
+|D             3.467 |G             0.325 |FM            0.075 |R_font        0.729 |F_font        0.610 |R_uni         0.753 |F_uni         0.493
+
+[36mINFO[0m::03/16 21:34:28 | Step   12000
+|D             3.443 |G             0.325 |FM            0.078 |R_font        0.727 |F_font        0.614 |R_uni         0.768 |F_uni         0.482
+
+[36mINFO[0m::03/16 22:00:43 | Step   13000
+|D             3.423 |G             0.362 |FM            0.080 |R_font        0.729 |F_font        0.631 |R_uni         0.765 |F_uni         0.487
+
+[36mINFO[0m::03/16 22:26:58 | Step   14000
+|D             3.369 |G             0.413 |FM            0.084 |R_font        0.738 |F_font        0.656 |R_uni         0.793 |F_uni         0.475
+
+[36mINFO[0m::03/16 22:53:12 | Step   15000
+|D             3.327 |G             0.434 |FM            0.090 |R_font        0.745 |F_font        0.657 |R_uni         0.783 |F_uni         0.485
+
+[36mINFO[0m::03/16 23:19:27 | Step   16000
+|D             3.320 |G             0.421 |FM            0.092 |R_font        0.761 |F_font        0.650 |R_uni         0.800 |F_uni         0.448
+
+[36mINFO[0m::03/16 23:45:41 | Step   17000
+|D             3.267 |G             0.461 |FM            0.098 |R_font        0.761 |F_font        0.671 |R_uni         0.792 |F_uni         0.457
+
+[36mINFO[0m::03/17 00:11:54 | Step   18000
+|D             3.302 |G             0.402 |FM            0.100 |R_font        0.750 |F_font        0.661 |R_uni         0.780 |F_uni         0.442
+
+[36mINFO[0m::03/17 00:38:07 | Step   19000
+|D             3.312 |G             0.380 |FM            0.103 |R_font        0.742 |F_font        0.665 |R_uni         0.799 |F_uni         0.412
+
+[36mINFO[0m::03/17 01:04:23 | Step   20000
+|D             3.288 |G             0.406 |FM            0.106 |R_font        0.748 |F_font        0.673 |R_uni         0.793 |F_uni         0.420
+
+[36mINFO[0m::03/17 01:04:23 | Validation at Epoch = 18.149
+[36mINFO[0m::03/17 01:04:27 | Checkpoint is saved to result/dm/checkpoints/last.pth
+
+[36mINFO[0m::03/17 01:30:44 | Step   21000
+|D             3.337 |G             0.361 |FM            0.113 |R_font        0.733 |F_font        0.662 |R_uni         0.761 |F_uni         0.420
+
+[36mINFO[0m::03/17 01:57:00 | Step   22000
+|D             3.288 |G             0.373 |FM            0.111 |R_font        0.760 |F_font        0.668 |R_uni         0.786 |F_uni         0.408
+
+[36mINFO[0m::03/17 02:23:13 | Step   23000
+|D             3.297 |G             0.372 |FM            0.112 |R_font        0.752 |F_font        0.664 |R_uni         0.783 |F_uni         0.416
+
+[36mINFO[0m::03/17 02:49:28 | Step   24000
+|D             3.316 |G             0.374 |FM            0.114 |R_font        0.742 |F_font        0.668 |R_uni         0.783 |F_uni         0.403
+
+[36mINFO[0m::03/17 03:15:45 | Step   25000
+|D             3.342 |G             0.336 |FM            0.113 |R_font        0.736 |F_font        0.656 |R_uni         0.780 |F_uni         0.390
+
+[36mINFO[0m::03/17 03:42:00 | Step   26000
+|D             3.338 |G             0.347 |FM            0.116 |R_font        0.737 |F_font        0.667 |R_uni         0.784 |F_uni         0.401
+
+[36mINFO[0m::03/17 04:08:13 | Step   27000
+|D             3.355 |G             0.367 |FM            0.119 |R_font        0.724 |F_font        0.680 |R_uni         0.779 |F_uni         0.406
+
+[36mINFO[0m::03/17 04:34:31 | Step   28000
+|D             3.372 |G             0.339 |FM            0.119 |R_font        0.733 |F_font        0.661 |R_uni         0.767 |F_uni         0.409
+
+[36mINFO[0m::03/17 05:00:48 | Step   29000
+|D             3.404 |G             0.344 |FM            0.120 |R_font        0.711 |F_font        0.674 |R_uni         0.778 |F_uni         0.396
+
+[36mINFO[0m::03/17 05:27:01 | Step   30000
+|D             3.433 |G             0.343 |FM            0.119 |R_font        0.698 |F_font        0.672 |R_uni         0.751 |F_uni         0.411
+
+[36mINFO[0m::03/17 05:27:01 | Validation at Epoch = 27.223
+[36mINFO[0m::03/17 05:27:05 | Checkpoint is saved to result/dm/checkpoints/last.pth
+
+[36mINFO[0m::03/17 05:53:20 | Step   31000
+|D             3.421 |G             0.383 |FM            0.123 |R_font        0.679 |F_font        0.697 |R_uni         0.755 |F_uni         0.415
+
+[36mINFO[0m::03/17 06:19:34 | Step   32000
+|D             3.425 |G             0.345 |FM            0.125 |R_font        0.696 |F_font        0.679 |R_uni         0.754 |F_uni         0.397
+
+[36mINFO[0m::03/17 06:45:48 | Step   33000
+|D             3.403 |G             0.393 |FM            0.130 |R_font        0.677 |F_font        0.708 |R_uni         0.750 |F_uni         0.404
+
+[36mINFO[0m::03/17 07:12:02 | Step   34000
+|D             3.395 |G             0.417 |FM            0.133 |R_font        0.679 |F_font        0.708 |R_uni         0.733 |F_uni         0.427
+
+[36mINFO[0m::03/17 07:38:17 | Step   35000
+|D             3.371 |G             0.426 |FM            0.139 |R_font        0.685 |F_font        0.714 |R_uni         0.735 |F_uni         0.417
+
+[36mINFO[0m::03/17 08:04:31 | Step   36000
+|D             3.326 |G             0.436 |FM            0.143 |R_font        0.700 |F_font        0.719 |R_uni         0.753 |F_uni         0.405
+
+[36mINFO[0m::03/17 08:30:53 | Step   37000
+|D             3.323 |G             0.433 |FM            0.147 |R_font        0.699 |F_font        0.713 |R_uni         0.741 |F_uni         0.420
+
+[36mINFO[0m::03/17 08:57:07 | Step   38000
+|D             3.267 |G             0.479 |FM            0.154 |R_font        0.711 |F_font        0.728 |R_uni         0.724 |F_uni         0.447
+
+[36mINFO[0m::03/17 09:23:27 | Step   39000
+|D             3.232 |G             0.484 |FM            0.160 |R_font        0.714 |F_font        0.728 |R_uni         0.731 |F_uni         0.437
+
+[36mINFO[0m::03/17 09:49:42 | Step   40000
+|D             3.183 |G             0.532 |FM            0.164 |R_font        0.726 |F_font        0.746 |R_uni         0.736 |F_uni         0.455
+
+[36mINFO[0m::03/17 09:49:42 | Validation at Epoch = 36.298
+[36mINFO[0m::03/17 09:49:46 | Checkpoint is saved to result/dm/checkpoints/last.pth
+
+[36mINFO[0m::03/17 10:16:00 | Step   41000
+|D             3.163 |G             0.524 |FM            0.170 |R_font        0.728 |F_font        0.750 |R_uni         0.743 |F_uni         0.445
+
