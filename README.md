@@ -12,7 +12,7 @@
     - Train : 사용자 손글씨 118글자 학습
     - Inference : 학습한 손글씨 기반 약 2300개의 한글 문자 생성
 # Flowchart
-<img src="/Users/yongcho/dev/yonggit/Own-My-Geul/img/flowchart.png">
+<img src="./img/flowchart.png">
 
 # Data
 
@@ -37,7 +37,7 @@ https://clova.ai/handwriting/list.html
 1. 만들어 놓은 템플릿에 직접 118개의 글자를 직접 작성한다.
 
 
-<img src="/Users/yongcho/dev/yonggit/Own-My-Geul/img/template.png">
+<img src="./img/template.png">
 
 
 1. 해당 파일을 `Own-My-Geul/utils` 폴더에 넣는다.
@@ -48,7 +48,7 @@ https://clova.ai/handwriting/list.html
 - DM, FUNIT, LF, MX 중 DM 모델을 사용
 - DM-Font 모델 구조
     
-    <img src="/Users/yongcho/dev/yonggit/Own-My-Geul/img/dm-architecture.png">
+    <img src="./img/dm-architecture.png">
     
 - DM-Font 논문 리뷰 → [[논문] DM-Font 논문 읽고 정리하기](https://www.notion.so/DM-Font-4a53442585104a77ae5b21ae4e3d8692?pvs=21)
 
@@ -72,6 +72,6 @@ https://clova.ai/handwriting/list.html
 ## Results
 
 ### 서비스 페이지
-<img src="/Users/yongcho/dev/yonggit/Own-My-Geul/img/page.png">
+<img src="./img/page.png">
 
 ### 생성 결과
